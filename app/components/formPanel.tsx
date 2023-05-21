@@ -6,7 +6,7 @@ const Formpanel = () => {
             <h2>お問い合わせ</h2>
             <div className="relative">
                 <button type="submit">
-                    <span className={formStyles.joinus}>Join Us</span>
+                    <span className={formStyles.joinUs}>Join Us</span>
                 </button>
             </div>
         </section>

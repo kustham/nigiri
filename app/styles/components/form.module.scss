@@ -1,29 +1,45 @@
-@import url('styles/variables.scss');
+@import '@variables';
 
-.joinUs {
+.joinUsButton {
+    display: inline-flex;
+    display: inline-block;
+    align-items: center;
+    min-width: 225px;
+    max-width: 225px;
+    padding-right: 18px;
+    padding-left: 18px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    background: #000;
+}
+
+.aura {
     position: absolute;
-    inset: 1px;
-    top: 2px;
+    padding: 3px;
+    background: linear-gradient(-90deg, #007cf0, #00dfd8, #ff0080, #007cf0);
+    background-size: auto;
+    background-size: 400% 100%;
+    border: none;
+    border-radius: calc($geist-radius - 1px);
+    animation: mowamowa 8s ease-in-out infinite;
+}
+
+.aura::after {
+    position: absolute;
     right: 0;
     left: 0;
     height: 100%;
-    padding: 0;
-    margin: 0;
     content: '';
-    background: linear-gradient(-90deg, #007cf0, #00dfd8, #ff0080, #007cf0);
     background-image: inherit;
     filter: blur(0.5rem);
     background-size: inherit;
-    background-size: 400% 100%;
-    border: none;
-
-    /* background: inherit; */
-    border-radius: calc($geist-radius - 1px);
     animation: inherit;
-    animation: moyamoya 8s ease-in-out infinite;
-    animation: moyamoya 8s ease-in-out 0s infinite normal none running;
 }
 
-main .hoge {
-    color: #ff0080;
+@keyframes mowamowa {
+    50% {
+        background-position: 140% 50%;
+        transform: skew(-2deg);
+    }
 }

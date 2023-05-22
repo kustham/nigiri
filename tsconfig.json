@@ -19,7 +19,7 @@
                 "name": "next"
             }
         ],
-        "baseUrl": "./app",
+        "baseUrl": "app",
         "paths": {
             "@/*": ["./*"],
             "@variables": ["styles/_variables.scss"]

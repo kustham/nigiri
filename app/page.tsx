@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import styles from '@/styles/components/page.module.scss'
 import { NextPage } from 'next'
 import dynamic from 'next/dynamic'
@@ -10,6 +9,8 @@ const KabaddiPanel = dynamic(() => import('./components/kabaddi'), { ssr: false 
 const FormPanel = dynamic(() => import('./components/form'), { ssr: false })
 
 const WantedPage: NextPage = () => {
+    console.log('Have a Good day.')
+
     return (
         <main className={styles.main}>
             <MessagePanel />

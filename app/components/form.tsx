@@ -10,19 +10,14 @@ const notoSansJP = Noto_Sans_JP({
 const FormPanel = () => {
     return (
         <section>
-            <div>
-                <h2 className={notoSansJP.className}>お問い合わせ</h2>
-            </div>
-            <div className={formStyle.aura}>
-                <div className={formStyle.joinUsButton}>
+            <div className={formStyle.formSection}>
+                <button
+                    type='submit'
+                    className={formStyle.button}
+                >
                     <GoRocket />
-                    <button
-                        type='submit'
-                        className=''
-                    >
-                        Join Us
-                    </button>
-                </div>
+                    <span>Join Us</span>
+                </button>
             </div>
         </section>
     )

@@ -19,6 +19,21 @@ const FormPanel = () => {
                     <span>Join Us</span>
                 </button>
             </div>
+            <div className={formStyle.buttonContainer}>
+                <span className={formStyle.tooltipContainer}>
+                    <button
+                        type='submit'
+                        className={`${formStyle.buttonBase} ${formStyle.tooltipContainer} ${formStyle.resetReset} ${formStyle.buttonButton} ${formStyle.buttonSecondary} ${formStyle.buttonText}`}
+                    >
+                        <span className={formStyle.buttonContent}>
+                            <span className={formStyle.aura}>
+                                <GoRocket />
+                            </span>
+                            <span className={formStyle.auraText}>Join Us</span>
+                        </span>
+                    </button>
+                </span>
+            </div>
         </section>
     )
 }

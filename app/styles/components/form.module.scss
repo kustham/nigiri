@@ -13,15 +13,14 @@
     right: 1px;
     bottom: 1px;
     left: 1px;
-    background: linear-gradient(-45deg, #007cf0, #00dfd8, #ff0080, #007cf0);
-    background-size: 200% 130%;
+    background: linear-gradient(90deg, var(--blue), var(--red), var(--green), var(--blue));
+    background-size: 300% 130%;
     border: none;
     border-radius: 6px;
-    animation: mowamowa 8s ease-in-out infinite;
-    animation-duration: 8s;
+    animation: mowamowa 3s ease-in-out infinite;
+    animation-duration: 6s;
     animation-play-state: running;
     animation-timing-function: ease-in-out;
-    animation-delay: 0s;
     animation-iteration-count: infinite;
     animation-direction: normal;
     animation-fill-mode: none;
@@ -50,7 +49,7 @@
     margin: 0;
     font: inherit;
     font-size: 1rem;
-    color: #ab4fa5;
+    color: var(--red);
     text-decoration: none;
     vertical-align: baseline;
     background: #000;

@@ -1,7 +1,12 @@
 @import '@variables';
 
 :root {
-    --foo: 0px;
+    --red: #d46b55;
+    --light-bule: #4abed4;
+    --blue: #297887;
+    --green: #5fd464;
+    --deep-green: #448746;
+    --lemon-yellow: #f2d129;
 }
 
 @media (prefers-color-scheme: dark) {

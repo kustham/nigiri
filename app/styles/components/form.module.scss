@@ -1,46 +1,32 @@
 @import '@variables';
 
-.formSection {
-    position: relative;
-    display: flex;
-    padding: 0.4em;
-    background: linear-gradient(-90deg, #007cf0, #00dfd8, #ff0080, #007cf0);
-    border-radius: 5px;
+.buttonContent {
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
-.button {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-top: 10px;
-    padding-right: 50px;
-    padding-bottom: 10px;
-    padding-left: 50px;
-    text-align: center;
-    text-indent: 0px;
-    text-shadow: none;
-    text-transform: none;
-    letter-spacing: normal;
-    cursor: pointer;
-    background: #000;
+.buttonWall {
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    bottom: 1px;
+    left: 1px;
+    background: linear-gradient(-45deg, #007cf0, #00dfd8, #ff0080, #007cf0);
+    background-size: 200% 130%;
     border: none;
-    border-radius: 5px;
-    word-spacing: normal;
-    writing-mode: horizontal-tb !important;
-    transition-timing-function: ease;
-    transition-duration: 0.15s;
-    transition-property: border-color, background, color, transform, box-shadow;
+    border-radius: 6px;
     animation: mowamowa 8s ease-in-out infinite;
-    text-rendering: auto;
+    animation-duration: 8s;
+    animation-play-state: running;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: none;
 }
-
-.button:hover {
-    color: #333;
-    background: #fff;
-}
-
-.button::after {
+.buttonWall::after {
     position: absolute;
     top: 2px;
     right: 0;
@@ -53,104 +39,28 @@
     animation: inherit;
 }
 
-.buttonContainer {
-    padding-right: 18px;
-    padding-left: 18px;
-}
-
-.tooltipContainer {
-    display: inline-flex;
-    align-items: center;
-}
-
-.buttonBase {
-    position: relative;
-    cursor: pointer;
-    user-select: none;
-}
-.resetReset {
+.joinUsButton {
     box-sizing: border-box;
-    margin: 0;
-    font: inherit;
-    font-size: inherit;
-    font-weight: inherit;
-    line-height: inherit;
-    text-decoration: none;
-    vertical-align: baseline;
-    outline: none;
-}
-.buttonButton {
     display: flex;
     align-items: center;
     justify-content: center;
     max-width: 100%;
-    height: var(--geist-form-height);
-    padding: 0 var(--geist-gap-half);
-    font-size: var(--geist-form-font);
-    font-weight: 500;
-    line-height: var(--geist-form-line-height);
-    color: var(--themed-fg, var(--geist-background));
-    background: var(--themed-bg, var(--geist-foreground));
-    border: 1px solid var(--themed-border, var(--geist-foreground));
-    border-radius: var(--geist-radius);
+    height: 1.25rem;
+    padding: 25.8px 16px;
+    margin: 0;
+    font: inherit;
+    font-size: 1rem;
+    color: #ab4fa5;
+    text-decoration: none;
+    vertical-align: baseline;
+    background: #000;
+    border: none;
+    border-radius: 5px;
+    outline: none;
     transition-timing-function: ease;
     transition-duration: 0.15s;
     transition-property: border-color, background, color, transform, box-shadow;
-}
-.buttonSecondary {
-    --themed-bg: var(--geist-background);
-    --themed-fg: var(--geist-secondary);
-    --themed-border: var(--accents-2);
-    min-width: 225px;
-    max-width: 225px;
-}
-
-.buttonText {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: var(--geist-background);
-    border-radius: calc(var(--geist-radius) - 1px);
-}
-.buttonContent {
-    display: inline-block;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}
-
-.aura {
-    position: absolute;
-    top: 1px;
-    right: 1px;
-    bottom: 1px;
-    left: 1px;
-    padding: 0;
-    margin: 0;
-    background: inherit;
-    background: linear-gradient(-90deg, #007cf0, #00dfd8, #ff0080, #007cf0);
-    background-size: 400% 100%;
-    border: none;
-    border-radius: calc(var(--geist-radius) - 1px);
-    animation: mowamowa 8s ease-in-out infinite;
-}
-
-.auraText {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: var(--geist-background);
-    border-radius: calc(var(--geist-radius) - 1px);
+    -webkit-tap-highlight-color: transparent;
 }
 
 @keyframes mowamowa {

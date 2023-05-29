@@ -20,6 +20,7 @@ const trainOne = Train_One({
 //アウト：アウトになった順番でコート外で待機する.味方が得点すると, 得点分の人数がコート内に復活する.ボーナスとスーパータックルの追加点は対象外.
 
 const KabaddiPanel = () => {
+    //横スクロール
     return (
         <section className={KabaddiStyle.formSection}>
             <div className={trainOne.className}>kabaddi</div>

@@ -10,30 +10,46 @@ const notoSansJP = Noto_Sans_JP({
 })
 
 const FormPanel = () => {
-    const [name, setName] = useState('')
-    const [message, setMessage] = useState('')
+    const [to, setTo] = useState('')
+    const [subject, setSubject] = useState('')
+    const [body, setBody] = useState('')
 
-    const sendMail = async () => {
-        await fetch('../api/mail', {
-            method: 'POST',
-            body: `
-名前
-${name}
-
-お問い合わせ内容
-${message}
-`,
-        })
+    const handleSubmit = (e: { preventDefault: () => void }) => {
+        e.preventDefault()
+        if (!to || !subject || !body) return
+        sendEmail(to, subject, body)
     }
+
+    const sendEmail = async (to: string, subject: string, body: string) => {
+        try {
+            await import('@lib/denrei/pkg/denrei').then((module) => {
+                const { send_email } = module
+                send_email(to, subject, body)
+            })
+        } catch (error) {
+            console.error(error)
+        }
+    }
+
     return (
         <>
-            <div>
-                <input type='text' onChange={(e) => setName(e.target.value)} />
-                <textarea onChange={(e) => setMessage(e.target.value)} />
-            </div>
+            <form onSubmit={handleSubmit}>
+                <div>
+                    <label htmlFor='to'>To:</label>
+                    <input id='to' type='email' value={to} onChange={(e) => setTo(e.target.value)} />
+                </div>
+                <div>
+                    <label htmlFor='subject'>Subject:</label>
+                    <input id='subject' type='text' value={subject} onChange={(e) => setSubject(e.target.value)} />
+                </div>
+                <div>
+                    <label htmlFor='body'>Body:</label>
+                    <textarea id='body' value={body} onChange={(e) => setBody(e.target.value)} />
+                </div>
+            </form>
             <div>
                 <span className={formStyle.buttonWall} />
-                <button type='submit' className={formStyle.joinUsButton} onClick={sendMail}>
+                <button type='submit' className={formStyle.joinUsButton} onClick={handleSubmit}>
                     <span className={formStyle.buttonContent}>
                         <GoRocket />
                         Join Us

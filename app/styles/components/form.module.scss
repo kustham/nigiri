@@ -25,6 +25,7 @@
     animation-direction: normal;
     animation-fill-mode: none;
 }
+
 .buttonWall::after {
     position: absolute;
     top: 2px;
@@ -60,6 +61,12 @@
     transition-duration: 0.15s;
     transition-property: border-color, background, color, transform, box-shadow;
     -webkit-tap-highlight-color: transparent;
+}
+
+.joinUsButton:hover{
+    background-color: var(--deep-green);
+    color: var(--white);
+    border-color: var(--white);
 }
 
 @keyframes mowamowa {

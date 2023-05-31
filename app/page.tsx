@@ -6,7 +6,7 @@ const MessagePanel = dynamic(() => import('./components/message'), { ssr: false 
 
 const KabaddiPanel = dynamic(() => import('./components/kabaddi'), { ssr: false })
 
-const FormPanel = dynamic(() => import('./components/form'), { ssr: false })
+const ContactPanel = dynamic(() => import('./components/form'), { ssr: false })
 
 const WantedPage: NextPage = () => {
     console.log('Have a Good day.')
@@ -15,7 +15,7 @@ const WantedPage: NextPage = () => {
         <main className={styles.main}>
             <MessagePanel />
             <KabaddiPanel />
-            <FormPanel />
+            <ContactPanel />
             <div className={styles.grid}>
                 <a
                     href='https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app'

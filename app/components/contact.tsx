@@ -33,20 +33,6 @@ const ContactPanel = () => {
 
     return (
         <>
-            <form onSubmit={handleSubmit}>
-                <div>
-                    <label htmlFor='to'>To:</label>
-                    <input id='to' type='email' value={to} onChange={(e) => setTo(e.target.value)} />
-                </div>
-                <div>
-                    <label htmlFor='subject'>Subject:</label>
-                    <input id='subject' type='text' value={subject} onChange={(e) => setSubject(e.target.value)} />
-                </div>
-                <div>
-                    <label htmlFor='body'>Body:</label>
-                    <textarea id='body' value={body} onChange={(e) => setBody(e.target.value)} />
-                </div>
-            </form>
             <div>
                 <span className={formStyle.buttonWall} />
                 <button type='submit' className={formStyle.joinUsButton} onClick={handleSubmit}>

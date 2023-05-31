@@ -1,2 +1,2 @@
 [workspace]
-members = ["./app/lib/denrei", "./app/lib/grill"]
+members = [ "./app/lib/grill"]

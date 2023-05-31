@@ -1,5 +1,5 @@
 'use client'
-import formStyle from '@/styles/components/form.module.scss'
+import formStyle from '@/styles/components/contact.module.scss'
 import { Noto_Sans_JP } from 'next/font/google'
 import { useState } from 'react'
 import { GoRocket } from 'react-icons/go'

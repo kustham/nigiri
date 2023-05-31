@@ -10,32 +10,12 @@ const notoSansJP = Noto_Sans_JP({
 })
 
 const ContactPanel = () => {
-    const [to, setTo] = useState('')
-    const [subject, setSubject] = useState('')
-    const [body, setBody] = useState('')
-
-    const handleSubmit = (e: { preventDefault: () => void }) => {
-        e.preventDefault()
-        if (!to || !subject || !body) return
-        sendEmail(to, subject, body)
-    }
-
-    const sendEmail = async (to: string, subject: string, body: string) => {
-        try {
-            await import('@lib/denrei/pkg/').then((module) => {
-                const { send_email } = module
-                send_email(to, subject, body)
-            })
-        } catch (error) {
-            console.error(error)
-        }
-    }
 
     return (
         <>
             <div>
                 <span className={formStyle.buttonWall} />
-                <button type='submit' className={formStyle.joinUsButton} onClick={handleSubmit}>
+                <button type='submit' className={formStyle.joinUsButton}>
                     <span className={formStyle.buttonContent}>
                         <GoRocket />
                         Join Us

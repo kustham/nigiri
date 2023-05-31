@@ -6,7 +6,7 @@ const MessagePanel = dynamic(() => import('./components/message'), { ssr: false 
 
 const KabaddiPanel = dynamic(() => import('./components/kabaddi'), { ssr: false })
 
-const ContactPanel = dynamic(() => import('./components/form'), { ssr: false })
+const ContactPanel = dynamic(() => import('./components/contact'), { ssr: false })
 
 const WantedPage: NextPage = () => {
     console.log('Have a Good day.')

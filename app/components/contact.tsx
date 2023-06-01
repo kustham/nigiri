@@ -1,7 +1,6 @@
 'use client'
 import formStyle from '@/styles/components/contact.module.scss'
 import { Noto_Sans_JP } from 'next/font/google'
-import { useState } from 'react'
 import { GoRocket } from 'react-icons/go'
 
 const notoSansJP = Noto_Sans_JP({

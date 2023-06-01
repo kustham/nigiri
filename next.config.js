@@ -1,4 +1,5 @@
 const path = require('path')
+
 const nextConfig = {
     reactStrictMode: true,
     webpack(config, { isServer }) {

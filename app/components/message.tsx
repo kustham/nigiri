@@ -8,24 +8,28 @@ const MessagePanel = () => {
     // Mere member recruitment website = non-functional museum
     // Concept = Gap + Excitement
     function sketch(p5: P5CanvasInstance) {
-        const symbol: SymbolModel = new SymbolModel(p5)
+        const symbols: SymbolModel[] = Array.from({ length: 50 }, (_,i) => new SymbolModel(i, p5.noise(1) * 50, p5));
 
         p5.setup = () => {
-            p5.createCanvas(600, 400, p5.WEBGL)
+            p5.createCanvas(p5.windowWidth, p5.windowHeight, p5.WEBGL)
         }
 
         p5.draw = () => {
+            p5.windowResized
+            p5.translate(200,200);
             p5.background(0, 0, 0, 0)
-            symbol.update()
-            symbol.render()
+            symbols.map((s) =>{
+                s.update()
+                s.render()
+            }
+            )
         }
     }
     return (
         <>
-            <div className={messageStyle.section}>
-                <p>{opinion.text}</p>
+            <section className={messageStyle.msgSection}>
                 <ReactP5Wrapper sketch={sketch} />
-            </div>
+            </section>
         </>
     )
 }

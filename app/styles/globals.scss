@@ -1,13 +1,13 @@
 @use '@variables' as v;
 
 :root {
-    --red: #d46b55;
-    --light-bule: #4abed4;
-    --blue: #297887;
+    --red: #E24215;
+    --blue: #00A3E0;
     --green: #5fd464;
-    --deep-green: #448746;
-    --lemon-yellow: #f2d129;
-    --white:#FFEEFF;
+    --silver: #C0C0C0 --white:#FFEEFF;
+    --purple: #5E2750;
+    --gold: #FFD700;
+    --pink-puple: #9F4D95;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -17,24 +17,20 @@
         --background-end-rgb: 0, 0, 0;
 
         --primary-glow: radial-gradient(rgba(1, 65, 255, 0.4), rgba(1, 65, 255, 0));
-        --secondary-glow: linear-gradient(
-            to bottom right,
-            rgba(1, 65, 255, 0),
-            rgba(1, 65, 255, 0),
-            rgba(1, 65, 255, 0.3)
-        );
+        --secondary-glow: linear-gradient(to bottom right,
+                rgba(1, 65, 255, 0),
+                rgba(1, 65, 255, 0),
+                rgba(1, 65, 255, 0.3));
 
         --tile-start-rgb: 2, 13, 46;
         --tile-end-rgb: 2, 5, 19;
-        --tile-border: conic-gradient(
-            #ffffff80,
-            #ffffff40,
-            #ffffff30,
-            #ffffff20,
-            #ffffff10,
-            #ffffff10,
-            #ffffff80
-        );
+        --tile-border: conic-gradient(#ffffff80,
+                #ffffff40,
+                #ffffff30,
+                #ffffff20,
+                #ffffff10,
+                #ffffff10,
+                #ffffff80);
     }
 }
 
@@ -55,8 +51,8 @@ body {
 
 body {
     color: rgb(var(--foreground-rgb));
-    background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb)))
-        rgb(var(--background-start-rgb));
+    background-color: var(--silver);
+    margin: 0;
 }
 
 a {

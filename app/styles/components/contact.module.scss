@@ -1,12 +1,5 @@
 @import '@variables';
 
-.buttonContent {
-    display: inline-block;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}
-
 .buttonWall {
     position: absolute;
     top: 1px;
@@ -64,14 +57,13 @@
 }
 
 .joinUsButton:hover{
-    background-color: var(--deep-green);
+    background-color: inherit;
     color: var(--white);
-    border-color: var(--white);
 }
 
 @keyframes mowamowa {
     50% {
-        background-position: 140% 50%;
+        background-position: 145%;
         transform: skew(-2deg);
     }
 }

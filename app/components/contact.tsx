@@ -9,19 +9,16 @@ const notoSansJP = Noto_Sans_JP({
 })
 
 const ContactPanel = () => {
-
     return (
-        <>
+        <section>
             <div>
                 <span className={formStyle.buttonWall} />
                 <button type='submit' className={formStyle.joinUsButton}>
-                    <span className={formStyle.buttonContent}>
-                        <GoRocket />
-                        Join Us
-                    </span>
+                    <GoRocket />
+                    Join Us
                 </button>
             </div>
-        </>
+        </section>
     )
 }
 

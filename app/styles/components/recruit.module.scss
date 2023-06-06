@@ -6,6 +6,7 @@
     right: 1px;
     bottom: 1px;
     left: 1px;
+    width: 9rem;
     background: linear-gradient(90deg, var(--blue), var(--red), var(--green), var(--blue));
     background-size: 300% 130%;
     border: none;
@@ -13,8 +14,6 @@
     animation: mowamowa 3s ease-in-out infinite;
     animation-duration: 6s;
     animation-play-state: running;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
     animation-direction: normal;
     animation-fill-mode: none;
 }
@@ -37,7 +36,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    max-width: 100%;
+    width: 9em;
     height: 1.25rem;
     padding: 25.8px 16px;
     margin: 0;

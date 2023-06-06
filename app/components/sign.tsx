@@ -19,11 +19,6 @@ const SignBoard = () => {
                 The escape drama filled with 'contact', 'dodging', 'capturing', and 'tackle'.
             </span>
             <span className={`${styles.teamGni} ${yujiMai.className}`}>國</span>
-            <ul>
-                <li>Rules</li>
-                <li>Schedule</li>
-                <li>Members</li>
-            </ul>
         </section>
     )
 }

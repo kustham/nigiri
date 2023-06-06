@@ -1,6 +1,7 @@
 @use '@variables' as v;
 
 :root {
+    --black: #2B2A33;
     --red: #E24215;
     --blue: #00A3E0;
     --green: #5fd464;
@@ -32,6 +33,10 @@
                 #ffffff10,
                 #ffffff80);
     }
+    html {
+        color-scheme: dark;
+        color: #FBFBFE;
+    }
 }
 
 * {
@@ -47,12 +52,7 @@
 html,
 body {
     max-width: 100vw;
-}
-
-body {
-    color: rgb(var(--foreground-rgb));
-    background-color: var(--silver);
-    margin: 0;
+    height: 100%;
 }
 
 a {
@@ -60,15 +60,20 @@ a {
     text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-    html {
-        color-scheme: dark;
-    }
-}
-
 .main {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    width: 100%;
+  position:relative;
+  min-height: 100%;
+}
+
+.agni-wrapper{
+    height: 100%;
+    min-height: 100vh;
+    position: relative;
+    padding-bottom: 10px;
+    box-sizing: border-box;
 }

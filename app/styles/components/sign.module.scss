@@ -6,30 +6,9 @@
 .teamA {
     color: var(--red);
     font-size: 45vw;
-    border: solid .5px;
-    line-height: 1;
-    transition-duration: 1s;
-}
-
-.teamA:hover {
-    animation: textExpand 1s ease-out 0s 1 alternate forwards;
 }
 
 .teamGni {
     color: var(--red);
     font-size: 45vw;
-    border: solid .5px;
-    line-height: 1;
-}
-
-.echo {
-}
-
-@keyframes textExpand {
-    0%{
-        font-size: 45vw;
-    }
-    100%{
-        font-size: 71vw;
-    }
 }

@@ -1,16 +1,9 @@
 import KabaddiStyle from '@/styles/components/kabaddi.module.scss'
-import { Train_One } from 'next/font/google'
-
-const trainOne = Train_One({
-    subsets: ['latin'],
-    weight: '400',
-})
-
 const KabaddiBoard = () => {
     //横スクロール
     return (
         <section className={KabaddiStyle.formSection}>
-            <div className={trainOne.className}>
+            <div>
                 <span>コート内で7人ずつのチームに分かれて戦う.15分ハーフで攻守を繰り返し, 点数の高いチームが勝利.</span>
                 <h2>攻撃:敵陣で敵にタッチして自陣に帰還することで，タッチした人数分を得点できる．</h2>
                 <ul>

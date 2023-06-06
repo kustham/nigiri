@@ -1,9 +1,11 @@
 import '@/styles/globals.scss'
 import { Noto_Sans_JP } from 'next/font/google'
+import Footer from './components/footer'
+import Header from './components/header'
 
 const noto = Noto_Sans_JP({
     subsets: ['latin'],
-    weight: '200',
+    weight: '300',
 })
 
 const siteName = '阿國'
@@ -32,7 +34,13 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
         <html lang='ja'>
-            <body className={noto.className}>{children}</body>
+            <body className={noto.className}>
+                <div className='agni-wrapper'>
+                    <Header />
+                    {children}
+                    <Footer />
+                </div>
+            </body>
         </html>
     )
 }

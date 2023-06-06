@@ -1,0 +1,68 @@
+@import '@variables';
+
+.buttonWall {
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    bottom: 1px;
+    left: 1px;
+    width: 9rem;
+    background: linear-gradient(90deg, var(--blue), var(--red), var(--green), var(--blue));
+    background-size: 300% 130%;
+    border: none;
+    border-radius: 6px;
+    animation: mowamowa 3s ease-in-out infinite;
+    animation-duration: 6s;
+    animation-play-state: running;
+    animation-direction: normal;
+    animation-fill-mode: none;
+}
+
+.buttonWall::after {
+    position: absolute;
+    top: 2px;
+    right: 0;
+    left: 0;
+    height: 100%;
+    content: '';
+    background-image: inherit;
+    filter: blur(0.5rem);
+    background-size: inherit;
+    animation: inherit;
+}
+
+.joinUsButton {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 9em;
+    height: 1.25rem;
+    padding: 25.8px 16px;
+    margin: 0;
+    font: inherit;
+    font-size: 1rem;
+    color: var(--red);
+    text-decoration: none;
+    vertical-align: baseline;
+    background: #000;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    transition-timing-function: ease;
+    transition-duration: 0.15s;
+    transition-property: border-color, background, color, transform, box-shadow;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.joinUsButton:hover{
+    background-color: inherit;
+    color: var(--white);
+}
+
+@keyframes mowamowa {
+    50% {
+        background-position: 145%;
+        transform: skew(-2deg);
+    }
+}

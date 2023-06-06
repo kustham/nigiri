@@ -1,9 +1,10 @@
 import '@/styles/globals.scss'
-import { Inter } from 'next/font/google'
-import { Oswald } from 'next/font/google'
+import { Noto_Sans_JP } from 'next/font/google'
 
-const inter = Inter({ subsets: ['latin'] })
-const oswald = Oswald({ subsets: ['latin'] })
+const noto = Noto_Sans_JP({
+    subsets: ['latin'],
+    weight: '200',
+})
 
 const siteName = '阿國'
 const description = '広島市を拠点に活動しているカバディチーム「阿國」は、未経験者の体験希望を随時募集・歓迎しています。'
@@ -31,7 +32,7 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
         <html lang='ja'>
-            <body className={oswald.className}>{children}</body>
+            <body className={noto.className}>{children}</body>
         </html>
     )
 }

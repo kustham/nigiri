@@ -6,7 +6,7 @@ const trainOne = Train_One({
     weight: '400',
 })
 
-const KabaddiPanel = () => {
+const KabaddiBoard = () => {
     //横スクロール
     return (
         <section className={KabaddiStyle.formSection}>
@@ -19,8 +19,8 @@ const KabaddiPanel = () => {
                         30秒以内に自陣に戻らなければアウト.体の一部が自陣に入ると帰還したとみなされる.レイド中は「カバディ」と発声し続ける（キャント）.
                     </li>
                     <li>
-                        【サードレイド】ボークラインを越えていれば,
-                        誰に触れずとも帰れる（エンプティレイド）. エンプティレイドの連続は２回まで認められる．
+                        【サードレイド】ボークラインを越えていれば, 誰に触れずとも帰れる（エンプティレイド）.
+                        エンプティレイドの連続は２回まで認められる．
                     </li>
                     <li>
                         【ストラグルとロビー】敵アンティに触れた瞬間から自陣に戻るまでの時間をストラグルといい,
@@ -42,4 +42,4 @@ const KabaddiPanel = () => {
     )
 }
 
-export default KabaddiPanel
+export default KabaddiBoard

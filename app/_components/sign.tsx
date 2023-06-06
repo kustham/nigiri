@@ -14,10 +14,7 @@ const oswald = Oswald({
 const SignBoard = () => {
     return (
         <section className={styles.signSection}>
-            <span className={`${styles.teamA} ${yujiMai.className}`}>阿</span>
-            <span className={`${styles.echo} ${oswald.className}`}>
-                The escape drama filled with 'contact', 'dodging', 'capturing', and 'tackle'.
-            </span>
+            <h1 className={`${styles.teamA} ${yujiMai.className}`}>阿</h1>
             <span className={`${styles.teamGni} ${yujiMai.className}`}>國</span>
         </section>
     )

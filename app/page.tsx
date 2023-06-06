@@ -1,7 +1,7 @@
 import { NextPage } from 'next'
 import '@/styles/globals.scss'
-import KabaddiBoard from './components/kabaddi'
-import SignBoard from './components/sign'
+import KabaddiBoard from './_components/kabaddi'
+import SignBoard from './_components/sign'
 
 const Home: NextPage = () => {
     return (

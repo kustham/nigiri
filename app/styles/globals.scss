@@ -33,6 +33,7 @@
                 #ffffff10,
                 #ffffff80);
     }
+
     html {
         color-scheme: dark;
         color: #FBFBFE;
@@ -66,11 +67,11 @@ a {
     align-items: center;
     justify-content: space-between;
     width: 100%;
-  position:relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
 }
 
-.agni-wrapper{
+.agni-wrapper {
     height: 100%;
     min-height: 100vh;
     position: relative;

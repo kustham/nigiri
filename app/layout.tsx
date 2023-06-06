@@ -1,7 +1,8 @@
 import '@/styles/globals.scss'
 import { Noto_Sans_JP } from 'next/font/google'
-import Footer from './components/footer'
-import Header from './components/header'
+import Footer from './_components/footer'
+import Header from './_components/header'
+import { Metadata } from 'next'
 
 const noto = Noto_Sans_JP({
     subsets: ['latin'],
@@ -12,10 +13,13 @@ const siteName = '阿國'
 const description = '広島市を拠点に活動しているカバディチーム「阿國」は、未経験者の体験希望を随時募集・歓迎しています。'
 const url = 'https://www.agni.ninja'
 
-export const metadata = {
+export const metadata: Metadata = {
     title: {
         default: siteName,
         template: `%s | ${siteName}`,
+    },
+    icons: {
+        icon: '/_next/static/media/metadata/favicon.png',
     },
     description,
     openGraph: {
@@ -35,11 +39,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     return (
         <html lang='ja'>
             <body className={noto.className}>
-                <div className='agni-wrapper'>
-                    <Header />
-                    {children}
-                    <Footer />
-                </div>
+                <Header />
+                {children}
+                <Footer />
             </body>
         </html>
     )

@@ -6,16 +6,13 @@ const yujiMai = Yuji_Mai({
     weight: '400',
 })
 
-const oswald = Oswald({
-    subsets: ['latin'],
-    weight: '400',
-})
-
 const SignBoard = () => {
     return (
         <section className={styles.signSection}>
-            <h1 className={`${styles.teamA} ${yujiMai.className}`}>阿</h1>
-            <span className={`${styles.teamGni} ${yujiMai.className}`}>國</span>
+            <div className={styles.teamName}>
+                <div className={`${styles.teamA} ${yujiMai.className}`}>阿</div>
+                <div className={`${styles.teamGni} ${yujiMai.className}`}>國</div>
+            </div>
         </section>
     )
 }

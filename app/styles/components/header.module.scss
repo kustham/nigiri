@@ -1,5 +1,26 @@
 .agniHeader {
+  position: sticky;
+  top: 0%;
+  width: 100%;
+  height: 1%;
+  text-align: center;
+  z-index: 2;
+}
+
+.agniNav {
   height: 100px;
+  width: 100%;
   position: absolute;
   top: 0;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.navMenu {
+  display: flex;
+  justify-content: space-between;
+  width: 10%;
+  padding-right: 5%;
+  margin-top: 1%;
 }

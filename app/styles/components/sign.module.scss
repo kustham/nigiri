@@ -1,25 +1,27 @@
 .signSection {
-    position: relative;
-    height: 100vh;
-    width: 100vw;
+    position: absolute;
+    height: 100%;
+    top: 0%;
+    width: 100%;
+}
+
+.teamName {
+    position: absolute;
+    top: 0%;
+    height: 10%;
 }
 
 .teamA {
-    display: block;
     position: absolute;
-    top: 0;
-    left: 0;
-    margin: 0;
-    padding: 0;
+    top: 0%;
+    left: 0%;
     color: var(--red);
-    font-size: 100em;
-    height: 100px;
+    font-size: 40em;
 }
 
 .teamGni {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 0%;
     color: var(--red);
-    font-size: 45vw;
+    font-size: 20em;
 }

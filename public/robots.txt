@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.agni.ninja
+
+# Sitemaps
+Sitemap: https://www.agni.ninja/sitemap.xml

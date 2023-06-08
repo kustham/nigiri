@@ -1,20 +1,12 @@
-.kabaddiSection {
+.kbdSection {
     position: absolute;
     top: 50%;
-    display: flex;
-    white-space: nowrap;
-    flex-direction: row;
-    -ms-overflow-style: none;
     width: 100vw;
-}
-
-.kabaddiSection::-webkit-scrollbar {
-    display: none;
+    display: flex;
 }
 
 .rulePanel {
-    display: flex;
+    min-width:100%;
     border: 1px solid;
-    height: 90vh;
-    overflow-x: hidden;
+    height: 100vh;
 }

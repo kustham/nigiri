@@ -1,8 +1,38 @@
+'use client'
 import headerStyles from 'styles/components/header.module.scss'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useCallback, useEffect, useState } from 'react'
 
 const Header = () => {
+    const [isHeaderShown, setIsHeaderShown] = useState(true)
+    const [lastPosition, setLastPosition] = useState(0)
+    const headerHeight = 40
+
+    const scrollEvent = useCallback(() => {
+        const offset = window.pageYOffset
+
+        if (offset > headerHeight) {
+            setIsHeaderShown(false)
+        } else {
+            setIsHeaderShown(true)
+        }
+
+        if (offset < lastPosition) {
+            setIsHeaderShown(true)
+        }
+
+        setLastPosition(offset)
+    }, [lastPosition])
+
+    useEffect(() => {
+        window.addEventListener('scroll', scrollEvent)
+
+        return () => {
+            window.removeEventListener('scroll', scrollEvent)
+        }
+    }, [scrollEvent])
+
     return (
         <header className={headerStyles.agniHeader}>
             <nav className={headerStyles.agniNav}>

@@ -1,10 +1,30 @@
 @import '@variables';
 
-.buttonWall {
+.recruitSection {
+    position: relative;
+    height: 90vh;
+}
+
+.message {
+    position: absolute;
+    top: 10%;
+    margin-bottom: 5%;
+}
+
+.buttonContainer {
+    margin: auto;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.aura {
     position: absolute;
     top: 1px;
     right: 1px;
     bottom: 1px;
+    margin: auto;
     left: 1px;
     width: 9rem;
     background: linear-gradient(90deg, var(--blue), var(--red), var(--green), var(--blue));
@@ -18,7 +38,7 @@
     animation-fill-mode: none;
 }
 
-.buttonWall::after {
+.aura::after {
     position: absolute;
     top: 2px;
     right: 0;
@@ -39,20 +59,14 @@
     width: 9em;
     height: 1.25rem;
     padding: 25.8px 16px;
-    margin: 0;
-    font: inherit;
+    margin: inherit;
     font-size: 1rem;
     color: var(--red);
     text-decoration: none;
-    vertical-align: baseline;
     background: #000;
     border: none;
     border-radius: 5px;
     outline: none;
-    transition-timing-function: ease;
-    transition-duration: 0.15s;
-    transition-property: border-color, background, color, transform, box-shadow;
-    -webkit-tap-highlight-color: transparent;
 }
 
 .joinUsButton:hover {

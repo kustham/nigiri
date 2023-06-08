@@ -38,7 +38,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
         <html lang='ja'>
-            <body className={noto.className}>
+            <body className={noto.className} >
                 <Header />
                 {children}
                 <Footer />

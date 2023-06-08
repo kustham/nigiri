@@ -1,12 +1,9 @@
 .kbdSection {
     position: absolute;
     top: 50%;
-    width: 100vw;
-    display: flex;
+    width: 100%;
 }
 
 .rulePanel {
-    min-width:100%;
-    border: 1px solid;
     height: 100vh;
 }

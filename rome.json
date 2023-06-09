@@ -5,10 +5,9 @@
     },
     "formatter": {
         "enabled": true,
-        "formatWithErrors": false,
+        "formatWithErrors": true,
         "indentStyle": "space",
         "indentSize": 4,
-
         "lineWidth": 120,
         "ignore": []
     },

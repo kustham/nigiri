@@ -9,9 +9,9 @@ const yujiMai = Yuji_Mai({
 const SignBoard = () => {
     return (
         <section className={styles.signSection}>
-            <div className={styles.teamName}>
-                <div className={`${styles.teamA} ${yujiMai.className}`}>阿</div>
-                <div className={`${styles.teamGni} ${yujiMai.className}`}>國</div>
+            <div className={`${styles.teamName} ${yujiMai.className}`}>阿國</div>
+            <div className={styles.videoWrapper}>
+                <video src='/back-fire.mp4' muted style={{ height: '100%', width: '100%' }} autoPlay playsInline loop />
             </div>
         </section>
     )

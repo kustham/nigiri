@@ -1,10 +1,8 @@
-'use client'
 import '@/styles/globals.scss'
 import { Noto_Sans_JP } from 'next/font/google'
 import Footer from './_components/footer'
 import Header from './_components/header'
 import { Metadata } from 'next'
-import { ThemeProvider } from 'next-themes'
 
 const noto = Noto_Sans_JP({
     subsets: ['latin'],
@@ -41,11 +39,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     return (
         <html lang='ja'>
             <body className={noto.className}>
-                <ThemeProvider>
-                    <Header />
-                    {children}
-                    <Footer />
-                </ThemeProvider>
+                <Header />
+                {children}
+                <Footer />
             </body>
         </html>
     )

@@ -5,10 +5,10 @@ import SignBoard from './_components/sign'
 
 const Home: NextPage = () => {
     return (
-        <main className='main'>
-            <SignBoard />
-            <KabaddiBoard />
-        </main>
+            <main className='main'>
+                <SignBoard />
+                <KabaddiBoard />
+            </main>
     )
 }
 

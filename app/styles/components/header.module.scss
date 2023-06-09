@@ -3,7 +3,6 @@
   width: 100%;
   z-index: 999;
   text-align: center;
-  padding: 20px;
 }
 
 .agniHeader.UpMove {
@@ -23,7 +22,8 @@
 .navMenu {
   display: flex;
   justify-content: space-between;
-  width: 10%;
-  padding-right: 5%;
-  margin-top: 1%;
+  width: 20%;
+  text-align:center;
+  padding:20px 0;
+  margin-right: 5%;
 }

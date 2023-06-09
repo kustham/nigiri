@@ -1,5 +1,5 @@
 'use client'
-import recruitStyle from '@/styles/components/recruit.module.scss'
+import recruitStyle from '@/styles/recruit/recruit.module.scss'
 import { NextPage } from 'next'
 import { Righteous } from 'next/font/google'
 
@@ -11,7 +11,7 @@ const righteous = Righteous({
 //TODO:ボタンクリック時に挙動欲しい
 const RecruitPage: NextPage = () => {
     return (
-        <main className={recruitStyle.recruitSection}>
+        <>
             <div className={recruitStyle.message}>
                 <h1>プレイヤー公募</h1>
                 <p>
@@ -30,7 +30,7 @@ const RecruitPage: NextPage = () => {
                     Join Agni
                 </button>
             </div>
-        </main>
+        </>
     )
 }
 

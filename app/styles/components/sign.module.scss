@@ -8,20 +8,15 @@
 .teamName {
     position: absolute;
     top: 0%;
-    height: 10%;
+    left: 0%;
+    color: var(--red);
+    font-size: 10em;
 }
 
-.teamA {
+.videoWrapper {
     position: absolute;
     top: 0%;
     left: 0%;
-    color: var(--red);
-    font-size: 40em;
-}
-
-.teamGni {
-    position: absolute;
-    top: 0%;
-    color: var(--red);
-    font-size: 20em;
+    z-index: -1;
+    filter: blur(0.3rem);
 }

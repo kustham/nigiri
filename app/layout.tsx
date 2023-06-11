@@ -9,8 +9,8 @@ const noto = Noto_Sans_JP({
     weight: '300',
 })
 
-const siteName = '阿國'
-const description = '広島市を拠点に活動しているカバディチーム「阿國」は、未経験者の体験希望を随時募集・歓迎しています。'
+const siteName = '阿國 | 広島市カバディチーム'
+const description = '未経験者の体験希望を随時募集・歓迎しています。阿國は広島市を拠点に活動しているカバディチームです。'
 const url = 'https://www.agni.ninja'
 
 export const metadata: Metadata = {
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
         template: `%s | ${siteName}`,
     },
     icons: {
-        icon: '/_next/static/media/metadata/favicon.png',
+        icon: '/favicon.png',
     },
     description,
     openGraph: {

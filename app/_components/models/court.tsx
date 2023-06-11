@@ -13,10 +13,19 @@ const CourtModel: NextPage = () => {
         if (!renderer || !camera) {
             return
         }
+        let mouseX = 0
+        let mouseY = 0
 
-        camera.position.z = 4
-        camera.position.x = 4
-        camera.position.y = 2
+        // マウス座標を更新する関数
+        const handleMouseMove = (event: MouseEvent) => {
+            // マウス座標を正規化する（-1から1の範囲）
+            mouseX = (event.clientX / window.innerWidth) * 2 - 1
+            mouseY = -(event.clientY / window.innerHeight) * 2 + 1
+        }
+
+        // マウス移動イベントのリスナーを追加
+        window.addEventListener('mousemove', handleMouseMove)
+        camera.position.set(3, 3, 3)
 
         renderer.setSize(windowWidth, windowHeight)
         renderer.setPixelRatio(window.devicePixelRatio)
@@ -57,6 +66,9 @@ const CourtModel: NextPage = () => {
         // アニメーション
         const clock = new THREE.Clock()
         const tick = () => {
+            camera.rotation.y = mouseX * 1
+            camera.rotation.x = mouseY * 1
+            camera.lookAt(new THREE.Vector3(0, 0, 0))
             const elapsedTime = clock.getElapsedTime()
             bonusArea.rotation.y = elapsedTime * 0.1
             window.requestAnimationFrame(tick)

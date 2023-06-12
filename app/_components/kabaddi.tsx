@@ -1,5 +1,5 @@
 'use client'
-import KabaddiStyle from '@/styles/components/kabaddi.module.scss'
+import kabaddiStyles from '@/styles/components/kabaddi.module.scss'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import SwiperCore, { Pagination, Navigation } from 'swiper'
 import 'swiper/css'
@@ -21,7 +21,7 @@ const KabaddiBoard = () => {
     ]
 
     return (
-        <section className={KabaddiStyle.kbdSection}>
+        <section className={kabaddiStyles.kbdSection}>
             <h2>ルール概要</h2>
             <Swiper
                 slidesPerView={1}
@@ -33,7 +33,7 @@ const KabaddiBoard = () => {
                 loop={true}
             >
                 {ruleComponents.map(({ id, rule }) => (
-                    <SwiperSlide key={id} className={KabaddiStyle.rulePanel}>
+                    <SwiperSlide key={id} className={kabaddiStyles.rulePanel}>
                         {rule}
                     </SwiperSlide>
                 ))}

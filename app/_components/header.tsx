@@ -36,7 +36,9 @@ const Header = () => {
     return (
         <header className={headerStyles.agniHeader}>
             <nav className={headerStyles.agniNav}>
-                <Image src='/resources/bar.png' width={100} height={50} alt='aGnI Logo' />
+                <Link href='/'>
+                    <Image src='/resources/bar.png' width={100} height={50} alt='aGnI Logo' />
+                </Link>
                 <ul className={headerStyles.navMenu}>
                     <li>
                         <Link href='/recruit'>Join Us</Link>

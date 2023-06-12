@@ -7,9 +7,8 @@ export default function useThree(canvas: HTMLCanvasElement | null) {
     const [scene] = useState<THREE.Scene>(new THREE.Scene())
 
     scene.fog = new THREE.Fog(0x000000, 50, 2000)
-    scene.add(new THREE.AxesHelper(10))
-    scene.add(new THREE.GridHelper(10, 5))
-
+    //scene.add(new THREE.AxesHelper(6))
+    //scene.add(new THREE.GridHelper(5, 10))
     useEffect(() => {
         if (!canvas) {
             return

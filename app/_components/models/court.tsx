@@ -3,6 +3,9 @@ import useResize from '@/hooks/useResize'
 import useThree from '@/hooks/useThree'
 import type { NextPage } from 'next'
 import { useEffect, useRef } from 'react'
+import { mergeGeometries } from 'three/examples/jsm/utils/BufferGeometryUtils'
+
+const COURT_SCALE = 0.5
 
 const CourtModel: NextPage = () => {
     const canvasRef = useRef<HTMLCanvasElement>(null)
@@ -13,19 +16,8 @@ const CourtModel: NextPage = () => {
         if (!renderer || !camera) {
             return
         }
-        let mouseX = 0
-        let mouseY = 0
-
-        // マウス座標を更新する関数
-        const handleMouseMove = (event: MouseEvent) => {
-            // マウス座標を正規化する（-1から1の範囲）
-            mouseX = (event.clientX / window.innerWidth) * 2 - 1
-            mouseY = -(event.clientY / window.innerHeight) * 2 + 1
-        }
-
-        // マウス移動イベントのリスナーを追加
-        window.addEventListener('mousemove', handleMouseMove)
-        camera.position.set(3, 3, 3)
+        camera.position.set(6, 7, 6)
+        camera.fov = 50
 
         renderer.setSize(windowWidth, windowHeight)
         renderer.setPixelRatio(window.devicePixelRatio)
@@ -33,7 +25,7 @@ const CourtModel: NextPage = () => {
         //material
         const courtMaterial = new THREE.MeshStandardMaterial({
             color: '#b065c9',
-            roughness: 0.6,
+            roughness: 5.6,
         })
         const lobbyMaterial = new THREE.MeshStandardMaterial({
             color: '#fea140',
@@ -42,19 +34,32 @@ const CourtModel: NextPage = () => {
         const lineMaterial = new THREE.LineBasicMaterial({ color: 0xffffff })
 
         // geometry
-        const bonusGeometry = new THREE.BoxGeometry(1.75, 0.05, 8)
-        const baulkGeometry = new THREE.BoxGeometry(1, 0.05, 8)
-        const edgesGeometry = new THREE.EdgesGeometry(bonusGeometry)
-        const edgesGeometry2 = new THREE.EdgesGeometry(baulkGeometry)
-
+        const fieldGeometry = mergeGeometries([
+            new THREE.BoxGeometry(3.75, 0.05, 8).translate(3.75 / 2, 0, 0),
+            new THREE.BoxGeometry(1, 0.05, 8).translate(3.75 + 0.5, 0, 0),
+            new THREE.BoxGeometry(1.75, 0.05, 8).translate(1.75 / 2 + 4.75, 0, 0),
+            new THREE.BoxGeometry(3.75, 0.05, 8).translate(-(3.75 / 2), 0, 0),
+            new THREE.BoxGeometry(1, 0.05, 8).translate(-(3.75 + 0.5), 0, 0),
+            new THREE.BoxGeometry(1.75, 0.05, 8).translate(-(1.75 / 2 + 4.75), 0, 0),
+        ])
+        const lobbyGeometry = mergeGeometries([
+            new THREE.BoxGeometry(6.5, 0.05, 1).translate(6.5 / 2, 0, 4.5),
+            new THREE.BoxGeometry(6.5, 0.05, 1).translate(6.5 / 2, 0, -4.5),
+            new THREE.BoxGeometry(6.5, 0.05, 1).translate(-6.5 / 2, 0, 4.5),
+            new THREE.BoxGeometry(6.5, 0.05, 1).translate(-6.5 / 2, 0, -4.5),
+        ])
+        const edgesFieldGeometry = new THREE.EdgesGeometry(fieldGeometry)
+        const edgesLobbyGeometry = new THREE.EdgesGeometry(lobbyGeometry)
         //mesh
-        const bonusArea = new THREE.Mesh(bonusGeometry, courtMaterial)
-        bonusArea.position.z = -7
-        bonusArea.rotation.set(-3, 0, 0)
-
-        const outline = new THREE.LineSegments(edgesGeometry, lineMaterial)
-        bonusArea.add(outline)
-        scene.add(bonusArea)
+        const noLobby = new THREE.Mesh(fieldGeometry, courtMaterial)
+        const lobby = new THREE.Mesh(lobbyGeometry, lobbyMaterial)
+        noLobby.scale.set(COURT_SCALE, COURT_SCALE, COURT_SCALE)
+        lobby.scale.set(COURT_SCALE, COURT_SCALE, COURT_SCALE)
+        const outline = new THREE.LineSegments(edgesFieldGeometry, lineMaterial)
+        const lineLobby = new THREE.LineSegments(edgesLobbyGeometry, lineMaterial)
+        noLobby.add(outline)
+        lobby.add(lineLobby)
+        scene.add(noLobby, lobby)
 
         // ライト
         const ambientLight = new THREE.AmbientLight(0xffffff, 0.7)
@@ -66,11 +71,10 @@ const CourtModel: NextPage = () => {
         // アニメーション
         const clock = new THREE.Clock()
         const tick = () => {
-            camera.rotation.y = mouseX * 1
-            camera.rotation.x = mouseY * 1
             camera.lookAt(new THREE.Vector3(0, 0, 0))
             const elapsedTime = clock.getElapsedTime()
-            bonusArea.rotation.y = elapsedTime * 0.1
+            noLobby.rotation.y = elapsedTime * 0.07
+            lobby.rotation.y = elapsedTime * 0.07
             window.requestAnimationFrame(tick)
             renderer.render(scene, camera)
         }
@@ -85,7 +89,6 @@ const CourtModel: NextPage = () => {
 
         renderer.setPixelRatio(window.devicePixelRatio)
         renderer.setSize(windowWidth, windowHeight)
-
         camera.aspect = windowWidth / windowHeight
         camera.updateProjectionMatrix()
     }, [renderer, camera, windowWidth, windowHeight])

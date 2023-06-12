@@ -5,18 +5,8 @@
     width: 100%;
 }
 
-.teamName {
-    position: absolute;
-    top: 0%;
-    left: 0%;
-    color: var(--red);
-    font-size: 10em;
-}
-
-.videoWrapper {
-    position: absolute;
-    top: 0%;
-    left: 0%;
-    z-index: -1;
-    filter: blur(0.3rem);
+.agni {
+    display: block;
+    font-size: 14em;
+    text-align: center;
 }

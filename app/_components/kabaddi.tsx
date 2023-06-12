@@ -22,7 +22,6 @@ const KabaddiBoard = () => {
 
     return (
         <section className={kabaddiStyles.kbdSection}>
-            <h2>ルール概要</h2>
             <Swiper
                 slidesPerView={1}
                 pagination={{

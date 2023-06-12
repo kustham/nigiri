@@ -10,6 +10,9 @@
     --purple: #5E2750;
     --gold: #FFD700;
     --pink-puple: #9F4D95;
+    --deep-red: #FA1D07;
+    --light-red: #FA6307;
+    --yellow: #F08307;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -37,6 +40,7 @@
 
     html {
         color-scheme: dark;
+        background-color: var(--black);
         color: #FBFBFE;
     }
 }

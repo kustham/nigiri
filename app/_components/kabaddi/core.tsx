@@ -1,9 +1,15 @@
-import CourtModel from "../models/court"
+import kabaddiStyles from '@/styles/components/kabaddi.module.scss'
+import CourtModel from '../models/court'
 
 const CoreRule = () => {
     return (
         <>
-            <p>コート内で7人ずつのチームに分かれて戦う.15分ハーフで攻守を繰り返し, 点数の高いチームが勝利.</p>
+            <div className={kabaddiStyles.ruleTitle}>
+                <h2>Court</h2>
+                <br />
+                <p>以下のコート内で7人ずつに分かれて戦う。</p>
+            </div>
+
             <CourtModel />
         </>
     )

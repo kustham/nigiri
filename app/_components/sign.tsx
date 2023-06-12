@@ -1,5 +1,5 @@
 import styles from 'styles/components/sign.module.scss'
-import { Yuji_Mai, Oswald } from 'next/font/google'
+import { Yuji_Mai } from 'next/font/google'
 
 const yujiMai = Yuji_Mai({
     subsets: ['latin'],
@@ -9,9 +9,8 @@ const yujiMai = Yuji_Mai({
 const SignBoard = () => {
     return (
         <section className={styles.signSection}>
-            <div className={`${styles.teamName} ${yujiMai.className}`}>阿國</div>
-            <div className={styles.videoWrapper}>
-                <video src='/back-fire.mp4' muted style={{ height: '100%', width: '100%' }} autoPlay playsInline loop />
+            <div className={`${styles.agni} ${yujiMai.className}`}>
+                <h1>阿國</h1>
             </div>
         </section>
     )

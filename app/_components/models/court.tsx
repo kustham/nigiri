@@ -5,7 +5,7 @@ import type { NextPage } from 'next'
 import { useEffect, useRef } from 'react'
 import { mergeGeometries } from 'three/examples/jsm/utils/BufferGeometryUtils'
 
-const COURT_SCALE = 0.5
+const COURT_SCALE = 0.45
 
 const CourtModel: NextPage = () => {
     const canvasRef = useRef<HTMLCanvasElement>(null)
@@ -16,7 +16,7 @@ const CourtModel: NextPage = () => {
         if (!renderer || !camera) {
             return
         }
-        camera.position.set(6, 7, 6)
+        camera.position.set(4, 2.5, 4)
         camera.fov = 50
 
         renderer.setSize(windowWidth, windowHeight)

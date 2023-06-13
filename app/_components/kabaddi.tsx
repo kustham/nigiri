@@ -5,13 +5,14 @@ import SwiperCore, { Pagination, Navigation } from 'swiper'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
-import CoreRule from './kabaddi/core'
+import CoreRule from './kabaddi/court'
 import RaidRule from './kabaddi/raid'
 import AntiRule from './kabaddi/anti'
 import MatchRule from './kabaddi/match'
 
 SwiperCore.use([Pagination, Navigation])
 
+// do not use grid layout
 const KabaddiBoard = () => {
     const ruleComponents = [
         { id: 'core', rule: CoreRule },
@@ -30,6 +31,7 @@ const KabaddiBoard = () => {
                 mousewheel={true}
                 navigation
                 loop={true}
+                className={kabaddiStyles.ruleSwiper}
             >
                 {ruleComponents.map(({ id, rule }) => (
                     <SwiperSlide key={id} className={kabaddiStyles.rulePanel}>

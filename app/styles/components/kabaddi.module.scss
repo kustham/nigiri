@@ -4,9 +4,18 @@
     width: 100%;
 }
 
+[data-theme='light'] .rulePanel {
+    background-color: var(--white);
+}
+
+.ruleSwiper {
+    height: 100vh;
+}
+
 .rulePanel {
     padding: auto;
     background-color: var(--black);
+    height: 100%;
 }
 
 .ruleContainer {
@@ -22,7 +31,7 @@
 .raidRule {
     width: 25%;
     margin: 2%;
-    height: 256px;
+    height: auto;
     display: inline-block;
     margin-top: 2rem;
     font-size: clamp(16px, 2.9vw, 32px);
@@ -31,6 +40,6 @@
     border-radius: 2.7rem;
 }
 
-.raidRule > p {
+.raidRule>p {
     font-size: 0.7em;
 }

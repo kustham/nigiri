@@ -9,8 +9,8 @@ const RaidRule = () => {
                 <p>敵にタッチして自陣に帰還することで，タッチした人数分を得点できます。</p>
             </div>
             <div className={kabaddiStyles.ruleContainer}>
-                <div className={kabaddiStyles.raidRule}>
-                    <h3>キャント - CANT</h3>
+                <div>
+                    <h3 className={kabaddiStyles.raidRule}>キャント - CANT</h3>
                     <p>
                         敵陣にいる間は「カバディ」と発声し続ける。激しく連呼する必要はないが，タックルされて呻き声があがってしまったり，くしゃみ等の別の音を発するとアウトになる．
                     </p>

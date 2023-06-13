@@ -25,11 +25,11 @@ const CourtModel: NextPage = () => {
         //material
         const courtMaterial = new THREE.MeshStandardMaterial({
             color: '#b065c9',
-            roughness: 5.6,
+            roughness: 0.1,
         })
         const lobbyMaterial = new THREE.MeshStandardMaterial({
             color: '#fea140',
-            roughness: 0.6,
+            roughness: 0.1,
         })
         const lineMaterial = new THREE.LineBasicMaterial({ color: 0xffffff })
 
@@ -50,6 +50,7 @@ const CourtModel: NextPage = () => {
         ])
         const edgesFieldGeometry = new THREE.EdgesGeometry(fieldGeometry)
         const edgesLobbyGeometry = new THREE.EdgesGeometry(lobbyGeometry)
+
         //mesh
         const noLobby = new THREE.Mesh(fieldGeometry, courtMaterial)
         const lobby = new THREE.Mesh(lobbyGeometry, lobbyMaterial)
@@ -62,11 +63,11 @@ const CourtModel: NextPage = () => {
         scene.add(noLobby, lobby)
 
         // ライト
-        const ambientLight = new THREE.AmbientLight(0xffffff, 0.7)
-        scene.add(ambientLight)
-        const pointLight = new THREE.PointLight(0xffffff, 1.0, 10, 0.9)
-        pointLight.position.set(10, 10, 10)
-        scene.add(pointLight)
+        //const ambientLight = new THREE.AmbientLight(0xffffff, 0.3)
+        //scene.add(ambientLight)
+        const light = new THREE.DirectionalLight(0xffffff, 1)
+        scene.add(light)
+        scene.add(new THREE.PointLight(0xffffff, 1.0, 50, 0.9))
 
         // アニメーション
         const clock = new THREE.Clock()

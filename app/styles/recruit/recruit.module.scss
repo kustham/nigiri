@@ -1,5 +1,3 @@
-@import "@variables";
-
 .recruitSection {
     position: relative;
     height: 90vh;
@@ -27,7 +25,7 @@
     margin: auto;
     left: 1px;
     width: 9rem;
-    background: linear-gradient(90deg, var(--blue), var(--red), var(--green), var(--blue));
+    background: linear-gradient(90deg, var(--yellow), var(--green), var(--white), var(--yellow));
     background-size: 300% 130%;
     border: none;
     border-radius: 6px;
@@ -61,7 +59,7 @@
     padding: 25.8px 16px;
     margin: inherit;
     font-size: 1rem;
-    color: var(--red);
+    color: var(--orange);
     text-decoration: none;
     background: #000;
     border: none;

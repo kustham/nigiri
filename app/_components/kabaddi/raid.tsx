@@ -6,7 +6,7 @@ const RaidRule = () => {
             <div className={kabaddiStyles.ruleTitle}>
                 <h2>Raid</h2>
                 <br />
-                <p>敵陣で敵にタッチして自陣に帰還することで，タッチした人数分を得点</p>
+                <p>敵にタッチして自陣に帰還することで，タッチした人数分を得点できます。</p>
             </div>
             <div className={kabaddiStyles.ruleContainer}>
                 <div className={kabaddiStyles.raidRule}>

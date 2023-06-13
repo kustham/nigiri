@@ -3,6 +3,7 @@ import headerStyles from 'styles/components/header.module.scss'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useCallback, useEffect, useState } from 'react'
+import { ChangeThemeButton } from './theme/themeButton'
 
 const Header = () => {
     const [isHeaderShown, setIsHeaderShown] = useState(true)
@@ -45,6 +46,9 @@ const Header = () => {
                     </li>
                     <li>
                         <Link href='/achievement'>実績</Link>
+                    </li>
+                    <li>
+                        <ChangeThemeButton />
                     </li>
                 </ul>
             </nav>

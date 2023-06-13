@@ -3,6 +3,7 @@ import { Noto_Sans_JP } from 'next/font/google'
 import Footer from './_components/footer'
 import Header from './_components/header'
 import { Metadata } from 'next'
+import { Providers } from './providers'
 
 const noto = Noto_Sans_JP({
     subsets: ['latin'],
@@ -39,9 +40,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     return (
         <html lang='ja'>
             <body className={noto.className}>
-                <Header />
-                {children}
-                <Footer />
+                <Providers>
+                    <Header />
+                    {children}
+                    <Footer />
+                </Providers>
             </body>
         </html>
     )

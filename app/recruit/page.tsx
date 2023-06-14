@@ -1,19 +1,29 @@
 'use client'
+import Modal from '@/recruit/modal'
+import SendMailPanel from '@/recruit/sendMailPanel'
 import recruitStyle from '@/styles/recruit/recruit.module.scss'
 import { NextPage } from 'next'
 import { Righteous } from 'next/font/google'
+import { useState } from 'react'
 
 const righteous = Righteous({
     subsets: ['latin'],
     weight: '400',
 })
 
-//TODO:ボタンクリック時に挙動欲しい
 const RecruitPage: NextPage = () => {
+    const [isOpenModal, setIsOpenModal] = useState(false)
+
+    const toggleModal = (e: React.MouseEvent) => {
+        if (e.target === e.currentTarget) {
+            setIsOpenModal(!isOpenModal)
+        }
+    }
     return (
         <>
             <div className={recruitStyle.message}>
-                <h1>プレイヤー公募</h1>
+                <h1>プレイヤーの公募について</h1>
+                <h2>ご挨拶</h2>
                 <p>
                     幼少期からカバディに打ち込んできたプレイヤーという存在は極めてまれであり，新規に競技を始められる方のほとんどは大学生以上です．身体が自由に動くのであれば，年齢は重要な要素ではなく，誰でも始めやすいスポーツです．
                 </p>
@@ -23,13 +33,23 @@ const RecruitPage: NextPage = () => {
                 <p>
                     もし，このページをご覧になっているあなたがまだカバディをプレイしたことがなければ，一度私たちの練習に参加してみませんか？
                 </p>
+                <h2>募集要項</h2>
             </div>
             <div className={recruitStyle.buttonContainer}>
                 <span className={recruitStyle.aura} />
-                <button type='submit' className={`${recruitStyle.joinUsButton} ${righteous.className}`}>
+                <button
+                    type='submit'
+                    className={`${recruitStyle.joinUsButton} ${righteous.className}`}
+                    onClick={toggleModal}
+                >
                     Join Agni
                 </button>
             </div>
+            {isOpenModal && (
+                <Modal close={toggleModal}>
+                    <SendMailPanel />
+                </Modal>
+            )}
         </>
     )
 }

@@ -88,27 +88,33 @@
     background-color: v.$bg-color;
     border-radius: v.$radius;
     overflow: hidden;
-    > header {
+
+    >label {
         padding: 0 v.$screen-padding;
     }
-    > div {
+
+    >div {
         margin: 0 v.$screen-padding/2;
         padding: v.$screen-padding;
         border-radius: v.$radius/2;
         box-shadow: v.$shadow-inset;
         background-color: darken(v.$bg-color, 3);
     }
-    > footer {
+
+    >footer {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: v.$screen-padding/2;
         padding: v.$screen-padding/2;
+
         button {
             font-weight: 700;
             padding: v.$screen-padding/2 v.$screen-padding/2;
+
             &[type="button"] {
                 color: v.$alert-color;
                 background-color: v.$bg-color;
+
                 &:hover:after {
                     content: "";
                     border: 2px solid v.$alert-color;
@@ -131,7 +137,8 @@
     background-color: rgba(0, 0, 0, 0.8);
     z-index: 1000;
     animation: fadeon 0.3s ease 0s;
-    > * {
+
+    >* {
         width: 100%;
         max-width: 480px;
         margin: auto;

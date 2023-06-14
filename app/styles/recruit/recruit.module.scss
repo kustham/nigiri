@@ -1,3 +1,5 @@
+@use "@variables" as v;
+
 .recruitSection {
     position: relative;
     height: 90vh;
@@ -70,11 +72,69 @@
 .joinUsButton:hover {
     background-color: inherit;
     color: var(--white);
+    cursor: pointer;
 }
 
 @keyframes mowamowa {
     50% {
         background-position: 145%;
         transform: skew(-2deg);
+    }
+}
+
+.panel {
+    position: relative;
+    width: 100%;
+    background-color: v.$bg-color;
+    border-radius: v.$radius;
+    overflow: hidden;
+    > header {
+        padding: 0 v.$screen-padding;
+    }
+    > div {
+        margin: 0 v.$screen-padding/2;
+        padding: v.$screen-padding;
+        border-radius: v.$radius/2;
+        box-shadow: v.$shadow-inset;
+        background-color: darken(v.$bg-color, 3);
+    }
+    > footer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: v.$screen-padding/2;
+        padding: v.$screen-padding/2;
+        button {
+            font-weight: 700;
+            padding: v.$screen-padding/2 v.$screen-padding/2;
+            &[type="button"] {
+                color: v.$alert-color;
+                background-color: v.$bg-color;
+                &:hover:after {
+                    content: "";
+                    border: 2px solid v.$alert-color;
+                }
+            }
+        }
+    }
+}
+
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: v.$screen-padding;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    animation: fadeon 0.3s ease 0s;
+    > * {
+        width: 100%;
+        max-width: 480px;
+        margin: auto;
+        animation: scaleon 0.25s ease-out 0s;
     }
 }

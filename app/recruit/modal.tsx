@@ -1,24 +1,23 @@
 import { NextPage } from 'next'
 import React from 'react'
 import { useState } from 'react'
-import { createPortal } from 'react-dom'
 import styles from 'styles/recruit/recruit.module.scss'
 
 type ModalProps = {
-    close: (e: any) => void
+    close: (e: React.MouseEvent) => void
     children: React.ReactNode
 }
 
 const Modal: NextPage<ModalProps> = (props) => {
     const [isMouseDown, setIsMouseDown] = useState(false)
 
-    const onMouseDown = (e: { target: any; currentTarget: any }) => {
+    const onMouseDown = (e: React.MouseEvent) => {
         if (e.target === e.currentTarget) {
             setIsMouseDown(true)
         }
     }
 
-    const onMouseUp = (e: MouseEvent) => {
+    const onMouseUp = (e: React.MouseEvent) => {
         if (isMouseDown) {
             props.close(e)
         }
@@ -28,6 +27,7 @@ const Modal: NextPage<ModalProps> = (props) => {
     return (
         <div className={styles.modalOverlay} onMouseDown={onMouseDown} onMouseUp={onMouseUp}>
             <div>
+                {/* rome-ignore lint/suspicious/noExplicitAny: <explanation> */}
                 {React.cloneElement(props.children as any, {
                     close: props.close,
                 })}

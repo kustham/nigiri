@@ -14,7 +14,7 @@ const righteous = Righteous({
 const RecruitPage: NextPage = () => {
     const [isOpenModal, setIsOpenModal] = useState(false)
 
-    const toggleModal = (e) => {
+    const toggleModal = (e: React.MouseEvent) => {
         if (e.target === e.currentTarget) {
             setIsOpenModal(!isOpenModal)
         }

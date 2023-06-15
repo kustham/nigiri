@@ -11,6 +11,14 @@
     margin-bottom: 5%;
 }
 
+.greetingTitle {
+    text-align: center;
+}
+
+.greeting {
+    padding: 2.5em;
+}
+
 .buttonContainer {
     margin: auto;
     position: absolute;
@@ -101,7 +109,7 @@
         background-color: darken(v.$bg-color, 3);
     }
 
-    >footer {
+    >.formFooter {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: v.$screen-padding/2;

@@ -23,7 +23,6 @@
         "paths": {
             "@/*": ["./*"],
             "@variables": ["styles/_variables.scss"],
-            "@lib/*" : ["lib/*"]
         }
     },
     "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],

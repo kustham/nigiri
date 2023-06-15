@@ -20,19 +20,9 @@ const SendMailPanel: NextPage<Props> = (props) => {
         formState: { errors },
     } = useForm<FormValues>()
 
-    const onSubmit: SubmitHandler<FormValues> = (data) => {
-        /*
-        fetch('/api/send', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                email: 'test@exsample.com',
-                message: { ...data },
-            }),
-        })
-        */
+    const onSubmit: SubmitHandler<FormValues> = async (data) => {
+        await fetch('/api/linebot')
+
         console.log('finish')
     }
 

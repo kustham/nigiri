@@ -36,16 +36,16 @@ const RecruitPage: NextPage = () => {
                     </p>
                 </div>
                 <h2 className={recruitStyle.greetingTitle}>募集要項</h2>
-            </div>
-            <div className={recruitStyle.buttonContainer}>
-                <span className={recruitStyle.aura} />
-                <button
-                    type='submit'
-                    className={`${recruitStyle.joinUsButton} ${righteous.className}`}
-                    onClick={toggleModal}
-                >
-                    Join Agni
-                </button>
+                <div className={recruitStyle.buttonContainer}>
+                    <span className={recruitStyle.aura} />
+                    <button
+                        type='submit'
+                        className={`${recruitStyle.joinUsButton} ${righteous.className}`}
+                        onClick={toggleModal}
+                    >
+                        Join Agni
+                    </button>
+                </div>
             </div>
             {isOpenModal && (
                 <Modal close={toggleModal}>

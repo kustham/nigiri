@@ -1,4 +1,5 @@
 const path = require('path')
+require('dotenv').config()
 
 const nextConfig = {
     reactStrictMode: true,
@@ -9,6 +10,11 @@ const nextConfig = {
         }
         config.resolve.alias['@'] = path.join(__dirname, 'app')
         return config
+    },
+    env: {
+        TOKEN: process.env.TOKEN,
+        SECRET: process.env.SECRET,
+        TOKUNAGA_ID: process.env.TOKUNAGA_ID,
     },
 }
 

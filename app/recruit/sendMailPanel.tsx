@@ -21,9 +21,11 @@ const SendMailPanel: NextPage<Props> = (props) => {
     } = useForm<FormValues>()
 
     const onSubmit: SubmitHandler<FormValues> = async (data) => {
-        await fetch('/api/linebot')
-
-        console.log('finish')
+        await fetch('/api/linebot', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ ...data }),
+        })
     }
 
     return (

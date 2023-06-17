@@ -23,19 +23,44 @@ const RecruitPage: NextPage = () => {
         <>
             <div className={recruitStyle.message}>
                 <h1>プレイヤーの公募について</h1>
-                <h2 className={recruitStyle.greetingTitle}>ご挨拶</h2>
-                <div className={recruitStyle.greeting}>
-                    <p>
-                        国内において，幼少期からカバディに打ち込んできたプレイヤーは極めて稀有な存在であり，新規に競技を始められる方のほとんどは大学生以上です。身体が自由に動くのであれば，年齢は重要な要素ではありません。カバディは誰でも始めやすいスポーツです．
-                    </p>
-                    <p>
-                        カバディの起源は野性的な狩猟にあり，極限の緊張下で取り組まれる駆け引きです．攻撃は帰還することに徹し，守りは帰還させないことに徹するため，激しく衝突することもあります．このような熱を帯びた局面の連続によって試合は構成されています．
-                    </p>
-                    <p>
-                        もし，このページをご覧になっているあなたがまだカバディをプレイしたことがなければ，一度私たちの練習に参加してみませんか？
-                    </p>
+                <div className={recruitStyle.recruitItem}>
+                    <h2 className={recruitStyle.subTitle}>ご挨拶</h2>
+                    <div className={recruitStyle.pr}>
+                        <p>
+                            新規に競技を始められる方のほとんどは大学生以上です。身体が自由に動くのであれば，カバディは誰でも始めやすいスポーツです。
+                        </p>
+                        <p>
+                            カバディの起源は野性的な狩猟にあり，極限の緊張下で取り組まれる駆け引きです．帰還に徹する攻めと，それを阻止する守りが激しく衝突します．このような熱を帯びた局面の連続によって試合は構成されています．もし，このページをご覧になっているあなたがまだカバディをプレイしたことがなければ，一度私たちの練習に参加してみませんか？
+                        </p>
+                    </div>
                 </div>
-                <h2 className={recruitStyle.greetingTitle}>募集要項</h2>
+                <div className={recruitStyle.recruitItem}>
+                    <h2 className={recruitStyle.subTitle}>募集要項</h2>
+                    <table className={recruitStyle.conditions}>
+                        <tbody>
+                            <tr className={recruitStyle.conditionsCol}>
+                                <th className={recruitStyle.conditionsRowTop}>ご年齢</th>
+                                <td className={recruitStyle.conditionsRow}>18 歳以上</td>
+                            </tr>
+                            <tr className={recruitStyle.conditionsCol}>
+                                <th className={recruitStyle.conditionsRowTop}>定期練習</th>
+                                <td className={recruitStyle.conditionsRow}>月１回以上参加いただける方</td>
+                            </tr>
+                            <tr className={recruitStyle.conditionsCol}>
+                                <th className={recruitStyle.conditionsRowTop}>大会</th>
+                                <td className={recruitStyle.conditionsRow}>年に１度の西日本大会に参加いただける方</td>
+                            </tr>
+                            <tr className={recruitStyle.conditionsCol}>
+                                <th className={recruitStyle.conditionsRowTop}>スポーツ経験</th>
+                                <td className={recruitStyle.conditionsRow}>不問</td>
+                            </tr>
+                            <tr className={recruitStyle.conditionsCol}>
+                                <th className={recruitStyle.conditionsRowTop}>体重</th>
+                                <td className={recruitStyle.conditionsRow}>85Kg未満</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
                 <div className={recruitStyle.buttonContainer}>
                     <span className={recruitStyle.aura} />
                     <button

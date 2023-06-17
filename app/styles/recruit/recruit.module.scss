@@ -9,15 +9,79 @@
     position: absolute;
     top: 10%;
     margin-bottom: 5%;
+
+    .recruitItem {
+        text-align: center;
+        display: block;
+
+        .subTitle {
+            margin: 1em;
+        }
+
+        .pr {
+            padding: 2.5em;
+            width: 71%;
+            text-align: left;
+            display: inline-block;
+            backdrop-filter: blur(20px);
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            border-right-color: rgba(255, 255, 255, 0.2);
+            border-bottom-color: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+            backdrop-filter: blur(20px);
+        }
+
+        .conditions {
+            width: 50%;
+            margin: auto;
+            border-collapse: collapse;
+
+            .conditionsCol {
+                border-bottom: solid 2px white;
+
+                &:last-child {
+                    border-bottom: none;
+                }
+            }
+
+            .conditionsRowTop {
+                position: relative;
+                text-align: left;
+                width: 30%;
+                background-color: #52c2d0;
+                color: white;
+                text-align: center;
+                padding: 10px 0;
+                z-index: 2;
+
+                &:after {
+                    display: block;
+                    content: "";
+                    width: 0px;
+                    height: 0px;
+                    position: absolute;
+                    top: calc(50% - 10px);
+                    right: -10px;
+                    border-left: 10px solid #52c2d0;
+                    border-top: 10px solid transparent;
+                    border-bottom: 10px solid transparent;
+                }
+            }
+
+            .conditionsRow {
+                text-align: left;
+                color: var(--orange);
+                width: 70%;
+                text-align: center;
+                background-color: #eee;
+                padding: 10px 0;
+            }
+        }
+    }
 }
 
-.greetingTitle {
-    text-align: center;
-}
 
-.greeting {
-    padding: 2.5em;
-}
 
 .buttonContainer {
     margin: auto;
@@ -25,63 +89,66 @@
     top: 120%;
     left: 50%;
     transform: translateX(-50%);
+
+    .aura {
+        position: absolute;
+        top: 1px;
+        right: 1px;
+        bottom: 1px;
+        margin: auto;
+        left: 1px;
+        width: 9rem;
+        background: linear-gradient(90deg, var(--yellow), var(--green), var(--white), var(--yellow));
+        background-size: 300% 130%;
+        border: none;
+        border-radius: 6px;
+        animation: mowamowa 3s ease-in-out infinite;
+        animation-duration: 6s;
+        animation-play-state: running;
+        animation-direction: normal;
+        animation-fill-mode: none;
+
+        &::after {
+            position: absolute;
+            top: 2px;
+            right: 0;
+            left: 0;
+            height: 100%;
+            content: "";
+            background-image: inherit;
+            filter: blur(0.5rem);
+            background-size: inherit;
+            animation: inherit;
+        }
+    }
+
+    .joinUsButton {
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 9em;
+        height: 1.25rem;
+        padding: 25.8px 16px;
+        margin: inherit;
+        font-size: 1rem;
+        color: var(--orange);
+        text-decoration: none;
+        background: #000;
+        border: none;
+        border-radius: 5px;
+        outline: none;
+
+        &:hover {
+            background-color: inherit;
+            color: var(--white);
+            cursor: pointer;
+        }
+    }
 }
 
-.aura {
-    position: absolute;
-    top: 1px;
-    right: 1px;
-    bottom: 1px;
-    margin: auto;
-    left: 1px;
-    width: 9rem;
-    background: linear-gradient(90deg, var(--yellow), var(--green), var(--white), var(--yellow));
-    background-size: 300% 130%;
-    border: none;
-    border-radius: 6px;
-    animation: mowamowa 3s ease-in-out infinite;
-    animation-duration: 6s;
-    animation-play-state: running;
-    animation-direction: normal;
-    animation-fill-mode: none;
-}
 
-.aura::after {
-    position: absolute;
-    top: 2px;
-    right: 0;
-    left: 0;
-    height: 100%;
-    content: "";
-    background-image: inherit;
-    filter: blur(0.5rem);
-    background-size: inherit;
-    animation: inherit;
-}
 
-.joinUsButton {
-    box-sizing: border-box;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 9em;
-    height: 1.25rem;
-    padding: 25.8px 16px;
-    margin: inherit;
-    font-size: 1rem;
-    color: var(--orange);
-    text-decoration: none;
-    background: #000;
-    border: none;
-    border-radius: 5px;
-    outline: none;
-}
-
-.joinUsButton:hover {
-    background-color: inherit;
-    color: var(--white);
-    cursor: pointer;
-}
 
 @keyframes mowamowa {
     50% {
@@ -97,11 +164,11 @@
     border-radius: v.$radius;
     overflow: hidden;
 
-    > label {
+    >label {
         padding: 0 v.$screen-padding;
     }
 
-    > div {
+    >div {
         margin: 0 v.$screen-padding/2;
         padding: v.$screen-padding;
         border-radius: v.$radius/2;
@@ -109,7 +176,7 @@
         background-color: darken(v.$bg-color, 3);
     }
 
-    > .formFooter {
+    >.formFooter {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: v.$screen-padding/2;
@@ -146,7 +213,7 @@
     z-index: 1000;
     animation: fadeon 0.3s ease 0s;
 
-    > * {
+    >* {
         width: 100%;
         max-width: 480px;
         margin: auto;

@@ -11,12 +11,11 @@ export async function POST(req: NextRequest) {
 
     try {
         const reqBody = await req.json()
-        const line_message = reqBody.message
         await client.pushMessage(process.env.TOKUNAGA_ID || '', {
             type: 'text',
-            text: line_message,
+            text: `氏名：\n${reqBody.name}\nメールアドレス：\n${reqBody.email}\nメッセージ：\n${reqBody.message}`,
         })
-        return new NextResponse(JSON.stringify(line_message), { status: 200 })
+        return new NextResponse(JSON.stringify(reqBody), { status: 200 })
     } catch (error) {
         console.log('error:', error)
         return new NextResponse(null, { status: 400, statusText: 'Bad Request' })

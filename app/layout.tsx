@@ -10,7 +10,7 @@ const noto = Noto_Sans_JP({
     weight: '300',
 })
 
-const siteName = '阿國 | 広島市カバディチーム'
+const siteName = '阿國 | 広島カバディチーム'
 const description = '未経験者の体験希望を随時募集・歓迎しています。阿國は広島市を拠点に活動しているカバディチームです。'
 const url = 'https://www.agni.ninja'
 

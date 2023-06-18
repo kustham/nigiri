@@ -35,8 +35,10 @@ const SendMailPanel: NextPage<Props> = (props) => {
     return (
         <form className={styles.panel} onSubmit={handleSubmit(onSubmit)}>
             <label>お問い合わせ</label>
-            <div>
+            <div className={styles.panelForm}>
+                <label>氏名</label>
                 <input {...register('name')} />
+                <label>メールアドレス</label>
                 <input
                     {...register('email', {
                         required: true,
@@ -48,7 +50,8 @@ const SendMailPanel: NextPage<Props> = (props) => {
                     })}
                 />
                 <div className={styles.errorMessage}>{errors.email?.message}</div>
-                <input {...register('message')} />
+                <label>メッセージ</label>
+                <input {...register('message')} className={styles.hoge} />
             </div>
             <div className={styles.formFooter}>
                 <button type='button' onClick={props.close}>

@@ -7,10 +7,6 @@
     background-position: center center;
 }
 
-[data-theme='light'] .signSection {
-    background: linear-gradient(to bottom, var(--white) 90%, var(--hiroshima));
-}
-
 .agni {
     font-size: 13em;
     writing-mode: vertical-rl;
@@ -18,5 +14,5 @@
 }
 
 .title {
-    opacity: 0.05;
+    opacity: 0.02;
 }

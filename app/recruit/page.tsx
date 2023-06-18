@@ -1,6 +1,6 @@
 'use client'
-import Modal from '@/recruit/modal'
-import SendMailPanel from '@/recruit/sendMailPanel'
+import Modal from '@/_components/recruit/modal'
+import SendMailPanel from '@/_components/recruit/sendMailPanel'
 import recruitStyle from '@/styles/recruit/recruit.module.scss'
 import { NextPage } from 'next'
 import { Righteous } from 'next/font/google'
@@ -28,10 +28,10 @@ const RecruitPage: NextPage = () => {
                     <h2 className={recruitStyle.subTitle}>ご挨拶</h2>
                     <div className={recruitStyle.pr}>
                         <p>
-                            新規に競技を始められる方のほとんどは大学生以上です。身体が自由に動くのであれば，カバディは誰でも始めやすいスポーツです。
+                            新規に競技を始められる方のほとんどは大学生以上です。体が自由に動くのであれば，カバディは誰でも始めやすいスポーツです。
                         </p>
                         <p>
-                            カバディの起源は野性的な狩猟にあり，極限の緊張下で取り組まれる駆け引きです．帰還に徹する攻めと，それを阻止する守りが激しく衝突します．このような熱を帯びた局面の連続によって試合は構成されています．もし，このページをご覧になっているあなたがまだカバディをプレイしたことがなければ，一度私たちの練習に参加してみませんか？
+                            カバディの起源は野性的な狩猟にあり，極限の緊張下で取り組まれる駆け引きです。もし，このページをご覧になっているあなたがまだカバディをプレイしたことがなければ，一度私たちの練習に参加してみませんか？
                         </p>
                     </div>
                 </div>
@@ -41,15 +41,17 @@ const RecruitPage: NextPage = () => {
                         <tbody>
                             <tr className={recruitStyle.conditionsCol}>
                                 <th className={recruitStyle.conditionsRowTop}>ご年齢</th>
-                                <td className={recruitStyle.conditionsRow}>18 歳以上</td>
+                                <td className={recruitStyle.conditionsRow}>18&nbsp;歳以上</td>
                             </tr>
                             <tr className={recruitStyle.conditionsCol}>
                                 <th className={recruitStyle.conditionsRowTop}>定期練習</th>
-                                <td className={recruitStyle.conditionsRow}>月１回以上参加いただける方</td>
+                                <td className={recruitStyle.conditionsRow}>月に1&nbsp;回以上の参加が可能な方</td>
                             </tr>
                             <tr className={recruitStyle.conditionsCol}>
                                 <th className={recruitStyle.conditionsRowTop}>大会</th>
-                                <td className={recruitStyle.conditionsRow}>年に１度の西日本大会に参加いただける方</td>
+                                <td className={recruitStyle.conditionsRow}>
+                                    年に1&nbsp;度の西日本大会(広島市開催)に参加いただける方
+                                </td>
                             </tr>
                             <tr className={recruitStyle.conditionsCol}>
                                 <th className={recruitStyle.conditionsRowTop}>スポーツ経験</th>
@@ -57,7 +59,7 @@ const RecruitPage: NextPage = () => {
                             </tr>
                             <tr className={recruitStyle.conditionsCol}>
                                 <th className={recruitStyle.conditionsRowTop}>体重</th>
-                                <td className={recruitStyle.conditionsRow}>85Kg未満</td>
+                                <td className={recruitStyle.conditionsRow}>85&nbsp;Kg未満</td>
                             </tr>
                         </tbody>
                     </table>

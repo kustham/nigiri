@@ -2,7 +2,9 @@
     text-align: center;
     height: 100vh;
     width: 100%;
-    background: linear-gradient(to bottom, var(--black) 90%, var(--hiroshima));
+    background-image: url('../../icons/Square310x310Logo.png');
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 
 [data-theme='light'] .signSection {
@@ -13,4 +15,8 @@
     font-size: 13em;
     writing-mode: vertical-rl;
     display: inline-block;
+}
+
+.title {
+    opacity: 0.05;
 }

@@ -18,7 +18,10 @@ const SendMailPanel: NextPage<Props> = (props) => {
         handleSubmit,
         reset,
         formState: { errors },
-    } = useForm<FormValues>()
+    } = useForm<FormValues>({
+        mode: 'onSubmit',
+        criteriaMode: 'all',
+    })
 
     const onSubmit: SubmitHandler<FormValues> = async (data) => {
         await fetch('/api/linebot', {
@@ -26,6 +29,7 @@ const SendMailPanel: NextPage<Props> = (props) => {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ ...data }),
         })
+        reset()
     }
 
     return (
@@ -43,6 +47,7 @@ const SendMailPanel: NextPage<Props> = (props) => {
                         },
                     })}
                 />
+                <div className={styles.errorMessage}>{errors.email?.message}</div>
                 <input {...register('message')} />
             </div>
             <div className={styles.formFooter}>

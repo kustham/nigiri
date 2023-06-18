@@ -5,6 +5,7 @@ import recruitStyle from '@/styles/recruit/recruit.module.scss'
 import { NextPage } from 'next'
 import { Righteous } from 'next/font/google'
 import { useState } from 'react'
+import { LightningBoltIcon } from '@radix-ui/react-icons'
 
 const righteous = Righteous({
     subsets: ['latin'],
@@ -69,6 +70,7 @@ const RecruitPage: NextPage = () => {
                         onClick={toggleModal}
                     >
                         Join Agni
+                        <LightningBoltIcon />
                     </button>
                 </div>
             </div>

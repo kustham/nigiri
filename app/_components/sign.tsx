@@ -10,7 +10,7 @@ const SignBoard = () => {
     return (
         <section className={styles.signSection}>
             <div className={`${styles.agni} ${yujiMai.className}`}>
-                <h1>阿國</h1>
+                <h1 className={styles.title}>阿國</h1>
             </div>
         </section>
     )

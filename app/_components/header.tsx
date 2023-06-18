@@ -9,7 +9,7 @@ const Header = () => {
         <header className={headerStyles.agniHeader}>
             <nav className={headerStyles.agniNav}>
                 <Link href='/'>
-                    <Image src='/resources/bar.png' width={100} height={50} alt='aGnI Logo' />
+                    AGNI
                 </Link>
                 <ul className={headerStyles.navMenu}>
                     <li>

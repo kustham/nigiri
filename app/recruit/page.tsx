@@ -23,9 +23,8 @@ const RecruitPage: NextPage = () => {
     return (
         <>
             <div className={recruitStyle.message}>
-                <h1>プレイヤーの公募について</h1>
                 <div className={recruitStyle.recruitItem}>
-                    <h2 className={recruitStyle.subTitle}>ご挨拶</h2>
+                    <h1 className={recruitStyle.subTitle}>プレイヤーの公募について</h1>
                     <div className={recruitStyle.pr}>
                         <p>
                             新規に競技を始められる方のほとんどは大学生以上です。体が自由に動くのであれば，カバディは誰でも始めやすいスポーツです。

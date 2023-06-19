@@ -8,7 +8,9 @@ const Header = () => {
     return (
         <header className={headerStyles.agniHeader}>
             <nav className={headerStyles.agniNav}>
-                <Link href='/'>AGNI</Link>
+                <Link href='/'>
+                    <Image src='/logo.svg' width={140} height={140} alt='logo' />
+                </Link>
                 <ul className={headerStyles.navMenu}>
                     <li className={headerStyles.joinus}>
                         <Link href='/recruit'>Join Us</Link>

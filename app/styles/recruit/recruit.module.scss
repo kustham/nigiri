@@ -3,12 +3,16 @@
 .recruitSection {
     position: relative;
     height: 90vh;
+    background-image: url('../../../public/logo.svg');
+    background-position: center center;
+    background-repeat: no-repeat;
 }
 
 .message {
     position: absolute;
     top: 10%;
     margin-bottom: 5%;
+    text-align: center;
     width: 100%;
 
     .recruitItem {
@@ -33,7 +37,6 @@
         }
 
         .conditions {
-            width: 81%;
             margin: auto;
             border-collapse: collapse;
 
@@ -70,12 +73,12 @@
             }
 
             .conditionsRow {
-                text-align: left;
                 color: var(--hiroshima);
                 width: 70%;
                 text-align: center;
                 background-color: #eee;
-                padding: 10px 0;
+                backdrop-filter: blur(20px);
+                padding: 1em;
             }
         }
     }
@@ -84,7 +87,7 @@
 .buttonContainer {
     margin: auto;
     position: absolute;
-    top: 120%;
+    top: 110%;
     left: 50%;
     transform: translateX(-50%);
 

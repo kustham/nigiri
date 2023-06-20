@@ -13,6 +13,13 @@
     --gold: #aba748;
     --pink-puple: #9f4d95;
     --yellow: #f08307;
+    --header-width: 80%
+}
+
+@media (width < 767px) {
+    :root {
+        --header-width: 100%;
+    }
 }
 
 [data-theme="dark"] {

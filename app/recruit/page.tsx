@@ -49,7 +49,7 @@ const RecruitPage: NextPage = () => {
                             <tr className={recruitStyle.conditionsCol}>
                                 <th className={recruitStyle.conditionsRowTop}>大会</th>
                                 <td className={recruitStyle.conditionsRow}>
-                                    年に1&nbsp;度の西日本大会(広島市開催)に参加いただける方
+                                    毎年秋の西日本大会(広島市)へご参加いただける方
                                 </td>
                             </tr>
                             <tr className={recruitStyle.conditionsCol}>

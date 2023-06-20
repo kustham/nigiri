@@ -20,15 +20,15 @@ const Header = () => {
             <nav className={headerStyles.agniNav}>
                 <Link href='/'>
                     <h1 className={`${headerStyles.teamName} ${unbounded.className}`}>
-                        AGNI <br />
-                        HIROSHIMA KABADDI TEAM
+                        <span className={headerStyles.agni}>AGNi</span> <br />
+                        HIROSHIMa KABADDi TEAm
                     </h1>
                 </Link>
                 <ul className={`${headerStyles.navMenu} ${oxanium.className}`}>
                     <li className={headerStyles.joinus}>
                         <Link href='/recruit'>Join Us</Link>
                     </li>
-                    <li>
+                    <li className={headerStyles.theme}>
                         <ChangeThemeButton />
                     </li>
                 </ul>

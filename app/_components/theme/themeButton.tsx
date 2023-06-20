@@ -14,7 +14,6 @@ export const ChangeThemeButton = () => {
     }
 
     return (
-        <>
             <button
                 className={headerStyles.themeToggle}
                 id='theme-toggle'
@@ -53,6 +52,5 @@ export const ChangeThemeButton = () => {
                     </g>
                 </svg>
             </button>
-        </>
     )
 }

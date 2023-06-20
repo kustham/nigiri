@@ -1,14 +1,19 @@
 .agniFooter {
-  position: absolute;
-  bottom: -10%;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
   width: 100%;
 }
 
 .copy {
   text-align: center;
   padding: 1em;
+  width: 100%;
 }
 
 .sns {
   padding: 1em;
+  width: 20vw;
+  display: flex;
+  justify-content: space-around;
 }

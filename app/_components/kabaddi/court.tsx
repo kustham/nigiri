@@ -1,5 +1,5 @@
 import kabaddiStyles from '@/styles/components/kabaddi.module.scss'
-import CourtModel from '../models/court'
+import { CourtModel } from '../models/court'
 
 const CoreRule = () => {
     return (

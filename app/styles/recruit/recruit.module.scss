@@ -3,7 +3,7 @@
 .recruitSection {
     position: relative;
     height: 90vh;
-    background-image: url('../../../public/logo.svg');
+    background-image: url("../../../public/logo.svg");
     background-position: center center;
     background-repeat: no-repeat;
 }
@@ -38,6 +38,7 @@
 
         .conditions {
             margin: auto;
+            margin-bottom: 3em;
             border-collapse: collapse;
 
             .conditionsCol {
@@ -86,9 +87,8 @@
 
 .buttonContainer {
     margin: auto;
-    position: absolute;
-    top: 110%;
     left: 50%;
+    bottom: 11%;
     transform: translateX(-50%);
 
     .aura {
@@ -96,7 +96,7 @@
         top: 1px;
         right: 1px;
         bottom: 1px;
-        margin: auto;
+        margin: inherit;
         left: 1px;
         width: 9rem;
         background: linear-gradient(90deg, var(--yellow), var(--green), var(--white), var(--yellow));
@@ -133,7 +133,7 @@
         padding: 25.8px 16px;
         margin: inherit;
         font-size: 1rem;
-        color: var(--orange);
+        color: var(--gold);
         text-decoration: none;
         background: #000;
         border: none;
@@ -167,7 +167,7 @@
         display: flex;
         flex-flow: column;
 
-        >input {
+        > input {
             height: 1.5em;
         }
 
@@ -176,11 +176,11 @@
         }
     }
 
-    >label {
+    > label {
         padding: 0 v.$screen-padding;
     }
 
-    >div {
+    > div {
         margin: 0 v.$screen-padding/2;
         padding: v.$screen-padding;
         border-radius: v.$radius/2;
@@ -188,7 +188,7 @@
         background-color: darken(v.$bg-color, 3);
     }
 
-    >.formFooter {
+    > .formFooter {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: v.$screen-padding/2;
@@ -201,7 +201,6 @@
             &[type="button"] {
                 color: v.$alert-color;
                 background-color: v.$bg-color;
-
             }
         }
     }
@@ -225,7 +224,7 @@
     z-index: 1000;
     animation: fadeon 0.3s ease 0s;
 
-    >* {
+    > * {
         width: 100%;
         max-width: 480px;
         margin: auto;

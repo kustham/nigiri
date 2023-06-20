@@ -7,7 +7,7 @@ import { mergeGeometries } from 'three/examples/jsm/utils/BufferGeometryUtils'
 
 const COURT_SCALE = 0.3
 
-const CourtModel: NextPage = () => {
+export const CourtModel: NextPage = () => {
     const canvasRef = useRef<HTMLCanvasElement>(null)
     const { windowWidth, windowHeight } = useResize()
     const { THREE, renderer, camera, scene } = useThree(canvasRef.current)

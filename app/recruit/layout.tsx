@@ -1,3 +1,4 @@
+import Footer from '@/_components/footer'
 import recruitStyle from '@/styles/recruit/recruit.module.scss'
 
 export const metadata = {

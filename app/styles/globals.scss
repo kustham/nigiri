@@ -35,6 +35,10 @@ a {
     text-decoration: none;
 }
 
+body {
+    min-height: 100vh;
+}
+
 ul {
     padding-left: 0;
 }
@@ -49,5 +53,5 @@ footer {
 
 .main {
     position: relative;
-    height: 210vh;
+    height: 200vh;
 }

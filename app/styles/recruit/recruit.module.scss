@@ -25,7 +25,7 @@
 
         .pr {
             padding: 2.5em;
-            width: 71%;
+            margin: 1em;
             text-align: left;
             display: inline-block;
             background-color: rgba(255, 255, 255, 0.1);
@@ -167,7 +167,7 @@
         display: flex;
         flex-flow: column;
 
-        > input {
+        >input {
             height: 1.5em;
         }
 
@@ -176,11 +176,11 @@
         }
     }
 
-    > label {
+    >label {
         padding: 0 v.$screen-padding;
     }
 
-    > div {
+    >div {
         margin: 0 v.$screen-padding/2;
         padding: v.$screen-padding;
         border-radius: v.$radius/2;
@@ -188,7 +188,7 @@
         background-color: darken(v.$bg-color, 3);
     }
 
-    > .formFooter {
+    >.formFooter {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: v.$screen-padding/2;
@@ -224,7 +224,7 @@
     z-index: 1000;
     animation: fadeon 0.3s ease 0s;
 
-    > * {
+    >* {
         width: 100%;
         max-width: 480px;
         margin: auto;

@@ -6,7 +6,7 @@ const CoreRule = () => {
         <>
             <div className={kabaddiStyles.ruleTitle}>
                 <h2>
-                    <span className={kabaddiStyles.rulesSubtitle}>Court</span>
+                    <span className={kabaddiStyles.rulesSubtitle}>Kabaddi Court</span>
                 </h2>
                 <br />
                 <p>以下のコート内で７人ずつ，２０分ハーフで戦います。</p>

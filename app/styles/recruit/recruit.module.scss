@@ -88,7 +88,6 @@
 .buttonContainer {
     margin: auto;
     left: 50%;
-    bottom: 11%;
     transform: translateX(-50%);
 
     .aura {
@@ -98,8 +97,8 @@
         bottom: 1px;
         margin: inherit;
         left: 1px;
-        width: 9rem;
-        background: linear-gradient(90deg, var(--yellow), var(--green), var(--white), var(--yellow));
+        width: 10em;
+        background: linear-gradient(90deg, var(--too), var(--ginshu), var(--gunjou), var(--geppaku), var(--too));
         background-size: 300% 130%;
         border: none;
         border-radius: 6px;
@@ -128,21 +127,20 @@
         display: flex;
         align-items: center;
         justify-content: space-around;
-        width: 9em;
-        height: 1.25rem;
+        width: 10em;
+        height: 1.25em;
         padding: 25.8px 16px;
         margin: inherit;
-        font-size: 1rem;
-        color: var(--gold);
-        text-decoration: none;
-        background: #000;
+        font-size: 1em;
+        background: var(--deep-green);
         border: none;
         border-radius: 5px;
         outline: none;
+        color: var(--geppaku);
 
         &:hover {
             background-color: inherit;
-            color: var(--white);
+            color: var(--geppaku);
             cursor: pointer;
         }
     }

@@ -16,26 +16,65 @@
 
 .ruleTitle {
     text-align: center;
-
+    margin-bottom: 3em;
     .rulesSubtitle {
         margin: 20px 0;
-        font-size: 4vw;
+        font-size: 6vw;
+        background: -webkit-linear-gradient(-45deg, var(--hiroshima), var(--gold));
         color: transparent;
-        background: -webkit-linear-gradient(0deg, var(--hiroshima), var(--gold));
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
 }
 
 .ruleContainer {
-    display: flex;
-    width: 80%;
-    flex-wrap: wrap;
-    justify-content: center;
-    .raidRule {
+    display: grid;
+    width: 62%;
+    height: 62%;
+    grid-template-columns: 1fr, 1fr, 1fr;
+    column-gap: 2em;
+    row-gap: 2em;
+    margin: auto;
+
+    .struggle {
+        grid-row: 1;
+        grid-column: 1 / 3;
+        border-radius: 37px;
+        padding: 2em;
+        background: #2B3137;
+        box-shadow: inset 28px 28px 56px #111416,
+            inset -28px -28px 56px #454e58;
     }
 
-    .raidRule > p {
-        font-size: 0.7em;
+    .cant {
+        grid-row: 1;
+        grid-column: 3;
+        border-radius: 37px;
+        padding: 2em;
+        background: #2B3137;
+        box-shadow: inset 28px 28px 56px #111416,
+            inset -28px -28px 56px #454e58;
     }
+
+    .bonus {
+        grid-row: 2;
+        grid-column: 1;
+        border-radius: 37px;
+        padding: 2em;
+        background: #2B3137;
+        box-shadow: inset 28px 28px 56px #111416,
+            inset -28px -28px 56px #454e58;
+    }
+
+    .return {
+        grid-row: 2;
+        grid-column: 2 / 4;
+        border-radius: 37px;
+        padding: 2em;
+        background: #2B3137;
+        box-shadow: inset 28px 28px 56px #111416,
+            inset -28px -28px 56px #454e58;
+    }
+
+
 }

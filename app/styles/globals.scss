@@ -5,14 +5,14 @@
     --deep-green: #1f3732;
     --hiroshima: #ab3748;
     --blue: #00a3e0;
-    --blue-purple: #5773B4;
     --green: #26ab8b;
-    --white: #c2e1e1;
-    --purple: #9969A9;
+    --geppaku: #F6F7F8;
     --gold: #aba748;
-    --pink-puple: #9f4d95;
-    --yellow: #f08307;
-    --header-width: 80%
+    --too: #F7C114;
+    --header-width: 80%;
+    --ginshu: #E24215;
+    --kurotobi: #432F2F;
+    --gunjou: #005baa;
 }
 
 @media (width < 767px) {
@@ -26,7 +26,7 @@
 }
 
 [data-theme="light"] {
-    background-color: var(--white);
+    background-color: var(--geppaku);
 }
 
 * {

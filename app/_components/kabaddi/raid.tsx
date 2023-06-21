@@ -17,31 +17,29 @@ const RaidRule = () => {
             <div className={kabaddiStyles.ruleContainer}>
                 <div className={kabaddiStyles.struggle}>
                     <GiMineExplosion />
-                    <h3>ストラグル - STRUGGLE</h3>
+                    <h3 className={kabaddiStyles.subsubtitle}>ストラグル</h3>
                     <p>
-                        敵に触れた瞬間から自陣に戻るまでの時間をストラグルという。
-                        ストラグル中のコートはロビーまでを含める。
+                        敵に触れた瞬間から帰還するまでの間をストラグルという。
+                        ストラグル中のコートはロビーまで含める。
                     </p>
                 </div>
                 <div className={kabaddiStyles.cant}>
                     <RiUserVoiceLine />
-                    <h3>キャント - CANT</h3>
+                    <h3 className={kabaddiStyles.subsubtitle}>キャント</h3>
                     <p>
-                        敵陣にいる間は「カバディ」と発声し続ける。激しく連呼する必要はないが，タックルされて呻き声があがってしまった等の別の音を発するとアウトになる。
+                        敵陣にいる間「カバディ」と発声し続ける。激しく連呼する必要はないが，別の音を発するとアウトになる。
                     </p>
                 </div>
                 <div className={kabaddiStyles.bonus}>
                     <LuPartyPopper />
-                    <h3>ボーナス - BONUS</h3>
+                    <h3 className={kabaddiStyles.subsubtitle}>ボーナス</h3>
                     <p>アンティが6人以上のときにボーナスラインの先に入ることで，1点得点できる。</p>
                 </div>
                 <div className={kabaddiStyles.return}>
                     <GiReturnArrow />
-                    <h3>帰還 - RETURN</h3>
+                    <h3 className={kabaddiStyles.subsubtitle}>帰還</h3>
                     <p>
-                        体の一部がミッドラインを越えることで自分の陣地に帰還することができる。ストラグルが発生した場合はこのとき得点する。
-                        レイド中にボークラインを越えていれば，ストラグル無しでも帰ることができ、これをエンプティレイドという。
-                        ただし，エンプティレイドを3回連続行うとRaiderがアウトになる。また，アウトにした敵の人数分，アウトになっている味方がコートに復活する。
+                        体の一部がミッドラインを越えることで自分の陣地に帰還できる。レイド中にボークラインを越えていれば，ストラグル無しでも帰ることができるが（エンプティレイド）、これを3回連続行ったレイダーはアウトになる。
                     </p>
                 </div>
             </div>

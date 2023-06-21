@@ -12,7 +12,6 @@ const Home: NextPage = () => {
                 <SignBoard />
                 <KabaddiBoard />
             </main>
-            <Footer />
         </>
     )
 }

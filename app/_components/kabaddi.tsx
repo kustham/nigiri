@@ -8,7 +8,6 @@ import 'swiper/css/pagination'
 import CoreRule from './kabaddi/court'
 import RaidRule from './kabaddi/raid'
 import AntiRule from './kabaddi/anti'
-import MatchRule from './kabaddi/match'
 
 SwiperCore.use([Pagination, Navigation])
 
@@ -18,7 +17,6 @@ const KabaddiBoard = () => {
         { id: 'core', rule: CoreRule },
         { id: 'raid', rule: RaidRule },
         { id: 'anti', rule: AntiRule },
-        { id: 'match', rule: MatchRule },
     ]
 
     return (

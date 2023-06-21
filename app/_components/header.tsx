@@ -28,9 +28,11 @@ const Header = () => {
                     <li className={headerStyles.joinus}>
                         <Link href='/recruit'>Join Us</Link>
                     </li>
+                    {/*
                     <li className={headerStyles.theme}>
                         <ChangeThemeButton />
                     </li>
+                    */}
                 </ul>
             </nav>
         </header>

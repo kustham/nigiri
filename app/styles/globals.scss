@@ -2,6 +2,7 @@
 
 :root {
     --black: #2b2a33;
+    --deep-green: #1f3732;
     --orange: #e24212;
     --hiroshima: #ab3748;
     --salmon: #ab5a3f;
@@ -23,7 +24,7 @@
 }
 
 [data-theme="dark"] {
-    background-color: var(--black);
+    background-color: var(--deep-green);
 }
 
 [data-theme="light"] {

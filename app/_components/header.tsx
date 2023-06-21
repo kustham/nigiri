@@ -1,7 +1,6 @@
 'use client'
 import headerStyles from 'styles/components/header.module.scss'
 import Link from 'next/link'
-import { ChangeThemeButton } from './theme/themeButton'
 import { Unbounded, Oxanium } from 'next/font/google'
 
 const unbounded = Unbounded({
@@ -20,8 +19,8 @@ const Header = () => {
             <nav className={headerStyles.agniNav}>
                 <Link href='/'>
                     <h1 className={`${headerStyles.teamName} ${unbounded.className}`}>
-                        <span className={headerStyles.agni}>AGNi</span> <br />
-                        HIROSHIMa KABADDi TEAm
+                        <span className={headerStyles.agni}>AGNI</span> <br />
+                        HIROSHIMA KABADDI TEAM
                     </h1>
                 </Link>
                 <ul className={`${headerStyles.navMenu} ${oxanium.className}`}>

@@ -4,10 +4,6 @@
     width: 100%;
 }
 
-[data-theme="light"] .rulePanel {
-    background-color: var(--white);
-}
-
 .ruleSwiper {
     height: 100vh;
 }
@@ -21,30 +17,13 @@
 .ruleTitle {
     text-align: center;
 
-    h2 {
-        margin: 1em;
-        position: relative;
-        display: inline-block;
-        padding: 0 55px;
-    }
-
-    h2:before,
-    h2:after {
-        content: "";
-        position: absolute;
-        top: 50%;
-        display: inline-block;
-        width: 45px;
-        height: 2px;
-        background-color: var(--hiroshima);
-    }
-
-    h2:before {
-        left: 0;
-    }
-
-    h2:after {
-        right: 0;
+    .rulesSubtitle {
+        margin: 20px 0;
+        font-size: 4vw;
+        color: transparent;
+        background: -webkit-linear-gradient(0deg, var(--hiroshima), var(--gold));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
 }
 
@@ -53,14 +32,7 @@
     width: 80%;
     flex-wrap: wrap;
     justify-content: center;
-
     .raidRule {
-        display: inline-block;
-        margin-top: 2rem;
-        font-size: 1em;
-        padding: 1.2rem 1.4rem;
-        box-shadow: 0px 4px 24px #eed3b5, inset 6px 6px 12px #ffdead, inset -12px -12px 24px #ac8531;
-        border-radius: 2em;
     }
 
     .raidRule > p {

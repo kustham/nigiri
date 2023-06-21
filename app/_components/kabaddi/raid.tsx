@@ -6,7 +6,9 @@ const RaidRule = () => {
     return (
         <>
             <div className={kabaddiStyles.ruleTitle}>
-                <h2>Raid</h2>
+                <h2>
+                    <span className={kabaddiStyles.rulesSubtitle}>How to Raid</span>
+                </h2>
                 <br />
                 <p>レイダーが敵にタッチして自陣に帰還することで，タッチした人数分を得点できます。</p>
                 <p>タッチされた敵はアウトとなり，コート外待機します。</p>

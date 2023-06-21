@@ -5,8 +5,7 @@ import recruitStyle from '@/styles/recruit/recruit.module.scss'
 import { NextPage } from 'next'
 import { Righteous } from 'next/font/google'
 import { useState } from 'react'
-import { LightningBoltIcon } from '@radix-ui/react-icons'
-import Footer from '@/_components/footer'
+import { BsFillLightningChargeFill } from 'react-icons/bs'
 
 const righteous = Righteous({
     subsets: ['latin'],
@@ -29,10 +28,10 @@ const RecruitPage: NextPage = () => {
                     <p>
                         新規に競技を始められる方のほとんどは大学生以上です。体が自由に動くのであれば，カバディは誰でも始めやすいスポーツです。
                     </p>
+                    <p>カバディの起源は野性的な狩猟にあり，極限の緊張下で取り組まれる駆け引きです。</p>
                     <p>
-                        カバディの起源は野性的な狩猟にあり，極限の緊張下で取り組まれる駆け引きです。
+                        もし，このページをご覧になっているあなたがまだカバディをプレイしたことがなければ，一度私たちの練習に参加してみませんか？
                     </p>
-                    <p>もし，このページをご覧になっているあなたがまだカバディをプレイしたことがなければ，一度私たちの練習に参加してみませんか？</p>
                 </div>
             </div>
             <div className={recruitStyle.recruitItem}>
@@ -72,7 +71,7 @@ const RecruitPage: NextPage = () => {
                     onClick={toggleModal}
                 >
                     Join Agni
-                    <LightningBoltIcon />
+                    <BsFillLightningChargeFill />
                 </button>
             </div>
             {isOpenModal && (

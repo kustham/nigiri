@@ -2,9 +2,10 @@ import kabaddiStyles from '@/styles/components/kabaddi.module.scss'
 import { RiUserVoiceLine } from 'react-icons/ri'
 import { GiMineExplosion, GiReturnArrow } from 'react-icons/gi'
 import { LuPartyPopper } from 'react-icons/lu'
+
 const RaidRule = () => {
     return (
-        <>
+        <div>
             <div className={kabaddiStyles.ruleTitle}>
                 <h2>
                     <span className={kabaddiStyles.rulesSubtitle}>How to Raid</span>
@@ -44,7 +45,7 @@ const RaidRule = () => {
                     </p>
                 </div>
             </div>
-        </>
+        </div>
     )
 }
 export default RaidRule

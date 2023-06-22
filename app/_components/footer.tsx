@@ -13,8 +13,11 @@ const Footer = () => {
                 <Link href={'https://twitter.com/agni_kab'}>
                     <Image priority src='/sns/twitter.svg' width={24} height={24} alt='Follow us on Twitter' />
                 </Link>
+                <Link href={'https://t.co/vyqsuQ4nuk'}>
+                    <Image priority src='/sns/line.svg' width={24} height={24} alt='Add our Line' />
+                </Link>
             </div>
-    </footer>
+        </footer>
     )
 }
 

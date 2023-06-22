@@ -1,9 +1,11 @@
 'use client'
+import Image from 'next/image'
 import Modal from '@/_components/recruit/modal'
 import SendMailPanel from '@/_components/recruit/sendMailPanel'
 import recruitStyle from '@/styles/recruit/recruit.module.scss'
 import { NextPage } from 'next'
 import { Righteous } from 'next/font/google'
+import Link from 'next/link'
 import { useState } from 'react'
 import { BsFillLightningChargeFill } from 'react-icons/bs'
 
@@ -63,22 +65,35 @@ const RecruitPage: NextPage = () => {
                     </tbody>
                 </table>
             </div>
-            <div className={recruitStyle.buttonContainer}>
-                <span className={recruitStyle.aura} />
-                <button
-                    type='submit'
-                    className={`${recruitStyle.joinUsButton} ${righteous.className}`}
-                    onClick={toggleModal}
-                >
-                    Join Agni
-                    <BsFillLightningChargeFill />
-                </button>
-            </div>
-            {isOpenModal && (
-                <Modal close={toggleModal}>
-                    <SendMailPanel />
-                </Modal>
-            )}
+            <footer className={recruitStyle.footer}>
+                <div className={recruitStyle.sns}>
+                    <Link href={'https://www.instagram.com/agni.kabaddi/'}>
+                        <Image priority src='/sns/insta.svg' width={24} height={24} alt='Follow us on Instagram' />
+                    </Link>
+                    <Link href={'https://twitter.com/agni_kab'}>
+                        <Image priority src='/sns/twitter.svg' width={24} height={24} alt='Follow us on Twitter' />
+                    </Link>
+                    <Link href={'https://t.co/vyqsuQ4nuk'}>
+                        <Image priority src='/sns/line.svg' width={24} height={24} alt='Add our Line' />
+                    </Link>
+                </div>
+                <div className={recruitStyle.buttonContainer}>
+                    <span className={recruitStyle.aura} />
+                    <button
+                        type='submit'
+                        className={`${recruitStyle.joinUsButton} ${righteous.className}`}
+                        onClick={toggleModal}
+                    >
+                        Join Agni
+                        <BsFillLightningChargeFill />
+                    </button>
+                </div>
+                {isOpenModal && (
+                    <Modal close={toggleModal}>
+                        <SendMailPanel />
+                    </Modal>
+                )}
+            </footer>
         </div>
     )
 }

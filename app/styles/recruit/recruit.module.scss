@@ -84,12 +84,26 @@
         }
     }
 }
+.footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 62%;
+    margin: auto;
+    padding: 3em 0;
+
+    @media (width < 760px) {
+        width: 100%;
+    }
+
+    .sns {
+        width: 25%;
+        display: flex;
+        justify-content: space-around;
+    }
+}
 
 .buttonContainer {
-    margin: auto;
-    left: 50%;
-    transform: translateX(-50%);
-
     .aura {
         position: absolute;
         top: 1px;

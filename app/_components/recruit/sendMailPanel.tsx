@@ -1,4 +1,5 @@
 import { NextPage } from 'next'
+import { useState } from 'react'
 import { SubmitHandler, useForm } from 'react-hook-form'
 import styles from 'styles/recruit/recruit.module.scss'
 type Props = {
@@ -22,14 +23,20 @@ const SendMailPanel: NextPage<Props> = (props) => {
         mode: 'onSubmit',
         criteriaMode: 'all',
     })
-
+    const [sending, setSending] = useState(false)
+    const [sent, setSent] = useState(false)
     const onSubmit: SubmitHandler<FormValues> = async (data) => {
-        await fetch('/api/linebot', {
+        setSending(true)
+        const res = await fetch('/api/linebot', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ ...data }),
         })
-        reset()
+        if (res.ok) {
+            setSending(false)
+            setSent(true)
+            reset()
+        }
     }
 
     return (
@@ -37,7 +44,7 @@ const SendMailPanel: NextPage<Props> = (props) => {
             <label>お問い合わせ</label>
             <div className={styles.panelForm}>
                 <label>氏名</label>
-                <input {...register('name')} />
+                <input {...register('name', { required: true })} />
                 <label>メールアドレス</label>
                 <input
                     {...register('email', {
@@ -51,14 +58,18 @@ const SendMailPanel: NextPage<Props> = (props) => {
                 />
                 <div className={styles.errorMessage}>{errors.email?.message}</div>
                 <label>メッセージ</label>
-                <input {...register('message')} className={styles.hoge} />
+                <input {...register('message', { required: true })} className={styles.hoge} />
             </div>
             <div className={styles.formFooter}>
                 <button type='button' onClick={props.close}>
-                    Cancel
+                    {!sent ? 'Cancel' : '完了'}
                 </button>
-                <button type='submit'>Send</button>
+                {!sent && <button type='submit'>送信</button>}
+                {sending && <div>送信しています...</div>}
             </div>
+            {sent && (
+                <div>お問い合わせありがとうございます。代表よりご記載のメールアドレスにご連絡させていただきます。</div>
+            )}
         </form>
     )
 }

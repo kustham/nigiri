@@ -70,7 +70,7 @@ const RecruitPage: NextPage = () => {
                     <Link href={'https://www.instagram.com/agni.kabaddi/'}>
                         <Image priority src='/sns/insta.svg' width={24} height={24} alt='Follow us on Instagram' />
                     </Link>
-                    <Link href={'https://twitter.com/agni_kab'}>
+                    <Link href={'https://twitter.com/agni_kabaddi'}>
                         <Image priority src='/sns/twitter.svg' width={24} height={24} alt='Follow us on Twitter' />
                     </Link>
                     <Link href={'https://t.co/vyqsuQ4nuk'}>

@@ -2,9 +2,6 @@
     text-align: center;
     height: 100vh;
     width: 100%;
-    background-image: url("../../../public/logo.svg");
-    background-repeat: no-repeat;
-    background-position: center center;
 }
 
 .agni {
@@ -15,4 +12,45 @@
 
 .title {
     opacity: 0.02;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+}
+
+.center::before {
+    background: radial-gradient(var(--too), var(--hiroshima));
+    border-radius: 50%;
+    width: 530px;
+    height: 330px;
+    margin-left: -390px;
+    z-index: -2;
+}
+
+.center::after {
+    background: linear-gradient(to bottom right,
+            var(--hiroshima),
+            var(--hiroshima),
+            var(--too));
+    width: 350px;
+    height: 160px;
+    z-index: -1;
+}
+
+.center::before,
+.center::after {
+    content: '';
+    left: 50%;
+    position: absolute;
+    filter: blur(45px);
+    transform: translateZ(0);
+}
+
+.logo {
+    position: relative;
 }
